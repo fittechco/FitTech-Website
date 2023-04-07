@@ -26,7 +26,7 @@ export function MyText({
             )
         case "p":
             return (
-                <p className={className + " h3Text / font-montserrat text-md md:text-xl lg:text-2xl "}>{children}</p>
+                <p className={className + " h3Text / font-montserrat text-base md:text-xl lg:text-2xl "}>{children}</p>
             )
         default:
             return <h1 className={className}>{children}</h1>
