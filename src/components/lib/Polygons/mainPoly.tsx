@@ -25,10 +25,10 @@ export default function MainPoly(
         title,
         mainPos,
         scatter,
-        scatter2,
-        scatter3,
         shape,
-        shape2
+        scatter2,
+        shape2,
+        scatter3,
 
     }: props) {
 

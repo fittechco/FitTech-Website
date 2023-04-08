@@ -2,49 +2,37 @@ import { LogoPoly } from "../lib/Polygons/logoPoly";
 import MainPoly from "../lib/Polygons/mainPoly";
 import { PlaceHolderPoly } from "../lib/Polygons/placeHolderPoly";
 import { Polygon } from "../lib/Polygons/polygons";
+import { MyText } from "../lib/texts/myText";
+import PolysAnimation from "./polysAnimation";
 
 export default function Hero() {
 
 
     return (
         // creating hero section wich will take full width and height of the current screen
-        <div className="hero / w-full h-full  bg-white  relative overflow-hidden">
-            <Polygon className={`absolute top-[3%] transition-all ease-out scale-50 `} />
-            <Polygon className={"absolute top-[40%] -left-[4%] scale-100"} />
-            <Polygon className={"absolute top-[20%] left-[25%] scale-75"} />
-            <Polygon className={"absolute top-[8%] left-[45%] scale-75"} />
-            <Polygon className={"absolute top-[70%] left-[10%] scale-[60%]"} />
-            <Polygon className={"absolute top-[50%] left-[15%] scale-[50%]"} />
-            <Polygon className={"absolute top-[70%] left-[40%] scale-100"} />
-            <div className="polyContainer absolute top-[12%] right-0 w-fit h-fit">
-                <div className="polyWrapper relative">
-                    <PlaceHolderPoly className="  w-[620px]" />
-                    <MainPoly title="Landing Pages" className="absolute " mainPos={{
-                        x: 14,
-                        y: 6.5
-                    }} scatter={{
-                        x: 12,
-                        y: 3.5
-                    }} scatter2={{
-                        x: 26.3,
-                        y: 69.4
-                    }} scatter3={{
-                        x: 65.6,
-                        y: 50.4,
-                    }} shape={{
-                        x: 26.4,
-                        y: 66.3
-                    }} shape2={{
-                        x: 62.6,
-                        y: 46.4 
-                    }} />
-                     {/* <MainPoly title="Gyms" className="absolute top-[6.5%] left-[38.3%]" /> */}
-                   {/* <MainPoly title="Digital Systems" className="absolute top-[26.6%] left-[50.7%]" />
-                    <MainPoly title="Mobile Apps" className="absolute top-[46.7%] left-[38%]" />
-                    <MainPoly title="Ecommerce Website" className="absolute top-[46.7%] left-[13.8%]" />
-                    <MainPoly title="Digital Systems" className="absolute top-[26.6%] left-[1.5%]" /> */}
-                    <LogoPoly className="absolute top-[25.5%] left-[24.5%]"/>
-                </div>
+        <section className="hero flex items-center / w-full h-full  bg-white  relative overflow-hidden z-10 p-20">
+            <Polygon className={`-z-[1] absolute top-[3%] transition-all ease-out scale-50 `} />
+            <Polygon className={"-z-[1] absolute top-[40%] -left-[4%] scale-100"} />
+            <Polygon className={"-z-[1] absolute top-[20%] left-[25%] scale-75"} />
+            <Polygon className={"-z-[1] absolute top-[8%] left-[45%] scale-75"} />
+            <Polygon className={"-z-[1] absolute top-[70%] left-[10%] scale-[60%]"} />
+            <Polygon className={"-z-[1] absolute top-[50%] left-[15%] scale-[50%]"} />
+            <Polygon className={"-z-[1] absolute top-[70%] left-[40%] scale-100"} />
+            <PolysAnimation />
+            <div className="heroInfo / flex flex-col gap-6 md:gap-8 / z-10 ">
+                <MyText type={"h1"} className={"text-thirdColor font-bold max-w-xl"} >Fitness meets technology: Solutions for the modern fitness industry</MyText>
+                <MyText type={"p"} className={"text-thirdColor3  max-w-md"} >
+                    Customized fitness solutions for gym owners, personal trainers,
+                    supplement store owners, and fitness enthusiasts. Grow your fitness
+                    business with our ecommerce websites, mobile apps, and digital systems.
+                </MyText>
+                <button className="px-3 py-2 border border-accentColor2 buttonLinear  w-fit backdrop-blur-sm">
+                    <MyText type={"h4"} className={"text-accentColor2  font-bold max-w-xl"} >Contact Us</MyText>
+
+                </button>
             </div>
-        </div>
-    )}
+        </section>
+    )
+}
+
+

@@ -18,7 +18,11 @@ export function MyText({
             )
         case "h3":
             return (
-                <h1 className={className + " h3Text / font-montserrat text-2xl md:text-4xl "}>{children}</h1>
+                <h1 className={className + " h3Text / font-montserrat text-2xl md:text-3xl "}>{children}</h1>
+            )
+        case "h4":
+            return (
+                <h1 className={className + " h3Text / font-montserrat text-xl md:text-3xl "}>{children}</h1>
             )
         case "span":
             return (
@@ -26,7 +30,7 @@ export function MyText({
             )
         case "p":
             return (
-                <p className={className + " h3Text / font-montserrat text-base md:text-xl lg:text-2xl "}>{children}</p>
+                <p className={className + " h3Text / font-montserrat text-base md:text-lg lg:text-xl "}>{children}</p>
             )
         default:
             return <h1 className={className}>{children}</h1>

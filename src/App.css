@@ -1,3 +1,13 @@
-.hero{
+.hero {
   background-image: linear-gradient(#040D15, #0C2840);
+}
+
+.buttonLinear {
+  background-image: linear-gradient(#040d1542, #0c28404d);
+}
+.bgLinear {
+  background-image: linear-gradient(#040d159d, #0c284096);
+}
+.bgLinearOff {
+  background-image: linear-gradient(#040d1500, #0c284000);
 }
