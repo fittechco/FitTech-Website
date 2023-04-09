@@ -13,9 +13,11 @@ export default function HeaderNav() {
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-        };
+        };  
     }, []);
+    
     console.log(scrollPosition);
+
     return (
         <div className={`headerNav / flex justify-between items-center / transition-all duration-300  ${scrollPosition > 80? " bgLinear backdrop-blur-sm " : " bgLinearOff  backdrop-blur-0 "} w-full h-20 px-20 fixed top-0 z-20`}>
             <div className="agencyName">

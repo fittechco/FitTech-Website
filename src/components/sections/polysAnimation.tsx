@@ -102,7 +102,7 @@ export default function PolysAnimation() {
                     x: 62.7,
                     y: 6.5
                 }} />
-                <MainPoly title="supplements stores" className="absolute " mainPos={{
+                <MainPoly title="Supplements stores" className="absolute " mainPos={{
                     x: 1.5,
                     y: 26.6
                 }} scatter={{

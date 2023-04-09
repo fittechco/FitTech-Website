@@ -10,7 +10,7 @@ export function MyText({
     switch (type) {
         case "h1":
             return (
-                <h1 className={className + " mainText / font-montserrat text-4xl md:6xl "}>{children}</h1>
+                <h1 className={className + " mainText / font-montserrat text-4xl md:text-6xl "}>{children}</h1>
             )
         case "h2":
             return (

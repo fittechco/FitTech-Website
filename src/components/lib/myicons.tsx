@@ -17,6 +17,22 @@ export default function MyIcons({
                 </svg>
 
             )
+        case "attach":
+            return (
+                <svg className={className} width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_39_110)">
+                        <path d="M22.0002 12.4973L13.0002 21.4973C7.00018 27.4973 -1.99982 18.4973 4.00018 12.4973L13.0002 3.49732C17.0002 -0.502678 23.0002 5.49732 19.0002 9.49732L10.0002 18.4973C8.00018 20.4973 5.00018 17.4973 7.00018 15.4973L16.0002 6.49732" fill="#EDEDED" />
+                        <path d="M22.0002 12.4973L13.0002 21.4973C7.00018 27.4973 -1.99982 18.4973 4.00018 12.4973L13.0002 3.49732C17.0002 -0.502678 23.0002 5.49732 19.0002 9.49732L10.0002 18.4973C8.00018 20.4973 5.00018 17.4973 7.00018 15.4973L16.0002 6.49732" stroke="#515151" stroke-width="2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_39_110">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.497314)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+
+            )
 
         default:
             return <h1>404 NOT FOUND</h1>
