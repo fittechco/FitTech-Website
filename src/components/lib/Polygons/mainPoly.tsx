@@ -59,7 +59,6 @@ export default function MainPoly(
               left: shape.x + "%",
             },
           });
-          console.log(shape);
           index = (index + 1) % shapeShift.length;
         }, 2000);
       

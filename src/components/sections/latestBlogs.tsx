@@ -3,8 +3,8 @@ import { MyText } from "../lib/texts/myText";
 export default function LatestBlogs() {
 
     return (
-        <div className="latestBlogs / flex flex-col gap-12 / p-6 md:p-20 w-full ">
-            <MyText type={"h2"} className={"font-bold text-thirdColor "} >Latest Blogs</MyText>
+        <div className="latestBlogs / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 w-full ">
+            <MyText type={"h2"} className={"font-bold text-thirdColor3 "} >Latest Blogs</MyText>
             <div className="blogContainer / flex justify-center items-center /  ">
                 <div className=" / flex justify-start items-end / max-w-5xl w-full h-full relative ">
                     <div className="blogCard bg-black  rounded-lg w-full h-96"></div>

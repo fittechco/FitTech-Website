@@ -6,7 +6,7 @@ import Services from "../sections/services";
 
 export default function HomePage() {
   return (
-    <div className="homePage / w-full h-full">
+    <div className="homePage / flex flex-col gap-20 / w-full h-full relative">
       <Hero />
       <Services />
       <About />

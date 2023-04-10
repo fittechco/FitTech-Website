@@ -1,15 +1,47 @@
 import MyIcons from "../lib/myicons";
 import { MyText } from "../lib/texts/myText";
 import MyButton from "../lib/elements/myButton";
+import emailjs from 'emailjs-com';
+import { useEffect, useState } from "react";
 
 export default function ContactUs() {
+  const SERVICE_ID = "service_lzdo1qu";
+  const TEMPLATE_ID = "template_shr24zk";
+  const USER_ID = "bKJefEiNRnoGbJflQ";
+  const [success, setSuccess] = useState(false)
+  const [failed, setFailed] = useState(false)
+
+
+  const handleOnSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(e.target);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
+        setSuccess(true)
+        setTimeout(() => {
+          setSuccess(false)
+        }, 2000);
+        console.log(result.text);
+      }, (error) => {
+        setfailed(true)
+        setTimeout(() => {
+          setFailed(false)
+        }, 2000);
+        console.log(error.text);
+      });
+    e.target.reset()
+  };
+
+
+
+
   return (
-    <div className="contact / flex flex-col gap-6 / p-6 md:p-20">
-      <MyText type={"h2"} className={"text-thirdColor font-bold  "}>
+    <div className="contact / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 ">
+      <MyText type={"h2"} className={"text-thirdColor3 font-bold  "}>
         Contact Us
       </MyText>
-      <div className="contactWrapper /  flex flex-col md:flex-row justify-center items-center  gap-5 / w-full ">
-        <div className="info flex-1 flex flex-col gap-6">
+      <div className="contactWrapper /  flex flex-col md:flex-row justify-center items-center  gap-5 /  w-full  relative">
+        <div className="info flex-1 md:flex flex-col gap-6 / hidden">
           <MyText type={"h2"} className={"text-thirdColor font-bold "}>
             Tell us about your Idea and we will be with you asap!
           </MyText>
@@ -22,39 +54,44 @@ export default function ContactUs() {
             </MyText>
           </div>
         </div>
-        <div className="contactForm / flex-1 flex flex-col gap-20 / hero formShadow p-6 rounded-lg">
+        <div className="contactForm / flex-1 flex flex-col gap-20 / hero h-full w-full formShadow p-6 rounded-lg  mx-auto relative z-40">
           <MyText
-            type={"h2"}
+            type={"h3"}
             className={" text-thirdColor font-bold text-center"}
           >
             Contact Form
           </MyText>
-          <form className="ContactFormWrapper / flex flex-col gap-4 md:gap-6 / ">
+          <form onSubmit={handleOnSubmit} className="ContactFormWrapper / flex flex-col gap-4 md:gap-6 / validate "
+            id="contactForm">
             <input
               type="text"
               name="name"
+              required
               placeholder="Your name"
-              className="border-b text-2xl placeholder:text-thirdColor3 text-thirdColor
-                         border-thirdColor bg-transparent focus:outline-none "
+              className="border-b text-lg md:text-2xl placeholder:text-thirdColor3 text-thirdColor
+                         border-thirdColor bg-transparent focus:outline-none rounded"
             />
 
             <input
-              type="text"
+              type="email"
               name="email"
+              required
               placeholder="Your email"
-              className="border-b text-2xl placeholder:text-thirdColor3 text-thirdColor
-                         border-thirdColor bg-transparent focus:outline-none "
+              className="border-b text-lg md:text-2xl placeholder:text-thirdColor3 text-thirdColor
+                         border-thirdColor bg-transparent focus:outline-none rounded"
             />
             <textarea
-              name="description"
+              name="message"
+              required
               placeholder="Tell us about your project"
-              className="border-b text-2xl h-8 overflow-hidden placeholder:text-thirdColor3 text-thirdColor
-                         border-thirdColor bg-transparent focus:outline-none "
+              className="border-b text-lg md:text-2xl h-8 overflow-hidden placeholder:text-thirdColor3 text-thirdColor
+                         border-thirdColor bg-transparent focus:outline-none rounded"
             />
+
           </form>
 
           <div className="flex flex-col gap-6">
-            <label htmlFor="file ">
+            <label htmlFor="file" className="cursor-pointer hover:-translate-y-1 transition-all w-fit ">
               <div className="flex gap-4">
                 <MyIcons className={""} icon={"attach"} />
                 <MyText type={"p"} className={"text-thirdColor3  font-bold "}>
@@ -63,10 +100,31 @@ export default function ContactUs() {
               </div>
               <input id="file" type="file" name="file" className="hidden" />
             </label>
-            <MyButton text={"Submit"} />
+            <MyButton text={"Submit"} type={""} form={"contactForm"} />
           </div>
+          <SuccessPopUp success={success} failed={false} />
         </div>
       </div>
     </div>
   );
 }
+
+
+
+function SuccessPopUp({ success, failed }: { success: boolean, failed: boolean }) {
+  return (
+    <div className={`successPopup / flex justify-center items-center  / transition-all ${success || failed ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute w-full h-full bg-mainColor/70 backdrop-blur-sm top-0 left-0 `}>
+      <div className="relative">
+        <div className={`wrapper / flex items-center justify-center   / transition-all ${success ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
+          <MyText type={"h2"} className={"font-bold text-accentColor"}>Sucess!</MyText>
+        </div>
+        <div className={`wrapper / flex items-center justify-center   / absolute top-0 transition-all ${failed ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
+          <MyText type={"h2"} className={"font-bold text-accentColor"}>Failed!</MyText>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+

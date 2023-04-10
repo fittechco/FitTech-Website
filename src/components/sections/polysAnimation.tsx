@@ -4,7 +4,7 @@ import { PlaceHolderPoly } from "../lib/Polygons/placeHolderPoly";
 
 export default function PolysAnimation() {
     return (
-        <div className="polyContainer absolute top-[12%] right-0 w-fit h-fit">
+        <div className="polyContainer hidden lg:block absolute top-[12%] right-0 w-fit h-fit scale-50 lg:scale-100">
             <div className="polyWrapper relative">
                 <PlaceHolderPoly className="  w-[620px]" />
                 <MainPoly title="Landing Pages" className="absolute " mainPos={{

@@ -5,7 +5,7 @@ import MyIcons from "../lib/myicons";
 export default function Services() {
     return (
         <div className="services / flex flex-col gap-3 md:gap-10  / m-4 md:m-20 ">
-            <MyText type={"h2"} className={"text-thirdColor font-bold"}  >Our Services</MyText>
+            <MyText type={"h2"} className={"text-thirdColor3 font-bold"}  >Our Services</MyText>
             <ServiceCards />
         </div>
     )
