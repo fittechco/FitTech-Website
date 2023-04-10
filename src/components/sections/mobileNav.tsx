@@ -132,7 +132,7 @@ function AnchorRoute({
                 <animated.div
                     style={styles}
                     className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}>
-                    <MyButton text={"Contact Us"} />
+                    <MyButton text={"Contact Us"} type={""} form={""} className={""} />
                 </animated.div>
             )
 
