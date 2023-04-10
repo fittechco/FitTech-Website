@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     // creating hero section wich will take full width and height of the current screen
-    <section ref={heroRef} className="hero flex items-center / w-full h-full  bg-white  relative overflow-x-hidden z-10 px-6 md:px-20 min-h-screen">
+    <section ref={heroRef} className="hero flex items-center / w-full h-full  bg-white  relative overflow-hidden z-10 px-6 md:px-20 min-h-[112vh]">
       <Polygon className={`-z-[1] absolute top-[3%] left-0 transition-all  ${heroVisible? "scale-50":"scale-0"}   `}/>
       <Polygon className={`-z-[1] absolute top-[40%] left-[0%] lg:-left-[4%]  transition-all duration-500 ease-in-out hidden md:block delay-100 ${heroVisible? "scale-75 lg:scale-100":"scale-0"} `} />
       <Polygon className={`-z-[1] absolute top-[20%] left-[20%] lg:left-[25%] transition-all duration-500 ease-in-out  delay-150 ${heroVisible? "scale-50 lg:scale-75":"scale-0"}`} />
