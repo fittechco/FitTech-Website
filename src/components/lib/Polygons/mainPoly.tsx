@@ -16,6 +16,7 @@ type props = {
     scatter3: position
     shape: position
     shape2: position
+    visible: boolean
 }
 
 
@@ -29,6 +30,7 @@ export default function MainPoly(
         scatter2,
         shape2,
         scatter3,
+        visible
 
     }: props) {
 
@@ -45,33 +47,34 @@ export default function MainPoly(
     const [springs, api] = useSpring(() => ({
         from: {
             top: mainPos && mainPos.y + "%",
-            left: mainPos && mainPos.x + "%"
+            left: mainPos && mainPos.x + "%",
         },
     }))
-
     useEffect(() => {
         let index = 0;
         const interval = setInterval(() => {
-          const shape = shapeShift[index];
-          api.start({
-            to: {
-              top: shape.y + "%",
-              left: shape.x + "%",
-            },
-          });
-          index = (index + 1) % shapeShift.length;
+            const shape = shapeShift[index];
+            api.start({
+                to: {
+                    top: shape.y + "%",
+                    left: shape.x + "%",
+                },
+            });
+            index = (index + 1) % shapeShift.length;
         }, 2000);
-      
+
         return () => clearInterval(interval);
-      }, []);
+    }, []);
+
+
 
     return (
-        <animated.div 
-        style={{
-            ...springs
-        }}
-        className={className + " mainPoly w-fit h-fit  "}>
-            <div className="flex justify-center items-center w-fit h-fit relative">
+        <animated.div
+            style={{
+                ...springs
+            }}
+            className={ "absolute mainPoly w-fit h-fit  "}>
+            <div className={`" flex justify-center items-center w-fit h-fit relative transition-all ease-in-out duration-500  ${className} ${visible ? "scale-100" : "scale-0"}`}>
                 <svg className={"w-[156px] h-[177px]"} width="187" height="215" viewBox="0 0 187 215" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.902267 54.0387L93.5 0.57735L186.098 54.0387V160.961L93.5 214.423L0.902267 160.961V54.0387Z" fill="#339CF8" stroke="#133E63" />
                 </svg>

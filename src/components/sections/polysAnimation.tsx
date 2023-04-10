@@ -2,12 +2,12 @@ import { LogoPoly } from "../lib/Polygons/logoPoly";
 import MainPoly from "../lib/Polygons/mainPoly";
 import { PlaceHolderPoly } from "../lib/Polygons/placeHolderPoly";
 
-export default function PolysAnimation() {
+export default function PolysAnimation({visible}:{visible:boolean}) {
     return (
         <div className="polyContainer hidden lg:block absolute top-[12%] right-0 w-fit h-fit scale-50 lg:scale-100">
             <div className="polyWrapper relative">
                 <PlaceHolderPoly className="  w-[620px]" />
-                <MainPoly title="Landing Pages" className="absolute " mainPos={{
+                <MainPoly visible={visible} title="Landing Pages" className="delay-[200ms]  " mainPos={{
                     x: 14,
                     y: 6.5
                 }} scatter={{
@@ -26,7 +26,7 @@ export default function PolysAnimation() {
                     x: 62.6,
                     y: 46.4
                 }} />
-                <MainPoly title="Gyms" className="absolute " mainPos={{
+                <MainPoly visible={visible} title="Gyms" className="delay-[400ms] " mainPos={{
                     x: 38.3,
                     y: 6.5
                 }} scatter={{
@@ -45,7 +45,7 @@ export default function PolysAnimation() {
                     x: 38.3,
                     y: 6.5
                 }} />
-                <MainPoly title="Digital Systems" className="absolute " mainPos={{
+                <MainPoly visible={visible} title="Digital Systems" className="delay-[600ms] " mainPos={{
                     x: 50.7,
                     y: 26.6
                 }} scatter={{
@@ -64,7 +64,7 @@ export default function PolysAnimation() {
                     x: 50.7,
                     y: 26.6
                 }} />
-                <MainPoly title="Mobile Apps" className="absolute" mainPos={{
+                <MainPoly visible={visible} title="Mobile Apps" className="delay-[800ms]" mainPos={{
                     x: 38,
                     y: 46.7
                 }} scatter={{
@@ -83,7 +83,7 @@ export default function PolysAnimation() {
                     x: 38,
                     y: 46.7
                 }} />
-                <MainPoly title="Ecommerce Website" className="absolute " mainPos={{
+                <MainPoly visible={visible} title="Ecommerce Website" className="delay-[1000ms]" mainPos={{
                     x: 13.8,
                     y: 46.7
                 }} scatter={{
@@ -102,7 +102,7 @@ export default function PolysAnimation() {
                     x: 62.7,
                     y: 6.5
                 }} />
-                <MainPoly title="Supplements stores" className="absolute " mainPos={{
+                <MainPoly visible={visible} title="Supplements stores" className="delay-[1200ms] " mainPos={{
                     x: 1.5,
                     y: 26.6
                 }} scatter={{

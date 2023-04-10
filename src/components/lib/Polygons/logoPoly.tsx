@@ -2,16 +2,19 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect } from "react";
 
 export function LogoPoly({
-    className
+    className,
+    visible
 } : {
+    visible:boolean
     className:string
 }) {
 
     const [springs, api] = useSpring(() => ({
         from: {
-            scale: "100%"
+            scale: "0%"
         },
     }))
+    
 
     useEffect(() => {
         let logoScale = false 
@@ -19,7 +22,7 @@ export function LogoPoly({
             logoScale = !logoScale
           api.start({
             to: {
-            scale: logoScale? "100%" : "105%"
+            scale: !visible && logoScale? "100%" : "105%"
             },
           });
         }, 2000);
@@ -27,10 +30,18 @@ export function LogoPoly({
         return () => clearInterval(interval);
       }, []);
 
+      useEffect(() => {
+        api.start({
+            to: {
+            scale: "100%"
+            },
+          });
+      }, [visible])
+
     return (
         <animated.svg
         style={{...springs}}
-         className={className + " w-[177px] h-[191px]"} width="215" height="233" viewBox="0 0 215 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+         className={className + ` w-[177px] h-[191px] ${visible? "scale-100" : "scale-0"}`} width="215" height="233" viewBox="0 0 215 233" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_135_175)">
                 <path d="M107.098 8L200.195 61.75V169.25L107.098 223L14 169.25V61.75L107.098 8Z" fill="#0C2840" />
                 <path d="M14.5 62.0387L107.098 8.57735L199.695 62.0387V168.961L107.098 222.423L14.5 168.961V62.0387Z" stroke="#5CB0F9" />

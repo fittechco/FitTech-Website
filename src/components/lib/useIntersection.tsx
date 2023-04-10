@@ -9,9 +9,6 @@ export default function useIntersection(element: any, rootMargin: string) {
                 if (entry.isIntersecting) {
                     setState(entry.isIntersecting);
                 }
-                else if (!entry.isIntersecting) {
-                    setState(false);
-                }
             }, { rootMargin }
         );
 

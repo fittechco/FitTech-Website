@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MyText } from "../lib/texts/myText";
 import MyIcons from "../lib/myicons";
+import useIntersection from "../lib/useIntersection";
 
 type params = {
     showNav: () => void
@@ -14,6 +15,7 @@ export default function HeaderNav({
     const [scrollPosition, setScrollPosition] = useState(0);
     const [scrollDirection, setScrollDirection] = useState('none');
     const navRef = useRef<HTMLDivElement>(null);
+    const visible = useIntersection(navRef, "0px")
 
     useEffect(() => {
         function handleScroll() {
@@ -54,19 +56,21 @@ export default function HeaderNav({
 
     
     return (
-        <div className={`headerNav / flex justify-between items-center / transition-all duration-300 
+        <div 
+        ref={navRef}
+        className={`headerNav / flex justify-between items-center / transition-all duration-300 
          ${scrollPosition > 80 ? " bgLinear backdrop-blur-sm " : " bgLinearOff  backdrop-blur-0 "} ${scrollDirection === "down"?  "-translate-y-full" : "translate-y-0"} w-full h-20 p-6 md:px-20 fixed top-0 z-20`}>
             <div className="agencyName">
-                <MyText type={"h3"} className={"font-bold text-thirdColor"} >FitTech</MyText>
+                <MyText type={"h3"} className={`font-bold text-thirdColor transition-all duration-500 ease-in-out  ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`} >FitTech</MyText>
             </div>
             <div className="navigations / md:flex gap-8 / hidden  ">
-                <a href="#" className="anchorText / text-thirdColor3 font-montserrat text-xl ">
+                <a href="#" className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-200 ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"} `}>
                     About Us
                 </a>
-                <a href="#" className="anchorText / text-thirdColor3 font-montserrat text-xl ">
+                <a href="#" className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[400ms] ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`}>
                     Our Services
                 </a>
-                <a href="#" className="anchorText / text-thirdColor3 font-montserrat text-xl ">
+                <a href="#" className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[600ms]  ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"} `}>
                     Blogs
                 </a>
             </div>

@@ -14,7 +14,7 @@ export default function ContactUs() {
 
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
-    console.log(e.target);
+    MyText(e.target);
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
         setSuccess(true)
