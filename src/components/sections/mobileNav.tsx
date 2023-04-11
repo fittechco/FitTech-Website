@@ -10,9 +10,11 @@ import {
   useTrail,
 } from "@react-spring/web";
 import useIntersection from "../lib/useIntersection";
+import { useNavigate } from "react-router-dom";
 
 type params = {
   hideNav: () => void;
+  handleContactClick: (navigate: any) => void;
   nav: boolean;
 };
 
@@ -34,7 +36,7 @@ const navLinks = [
   },
 ];
 
-export default function MobileNav({ hideNav, nav }: params) {
+export default function MobileNav({ hideNav, nav, handleContactClick }: params) {
   const navigationRef = useRef<HTMLDivElement>(null);
 
   const isVisible = useIntersection(navigationRef, "0px");
@@ -90,10 +92,9 @@ export default function MobileNav({ hideNav, nav }: params) {
   return (
     <animated.div
       style={{ ...springs }}
-      className={`mobileNav / flex justify-center items-center / fixed top-0 left-0 h-full w-full
-          bg-mainColor3/70 backdrop-blur-sm z-40 ${
-            nav ? "pointer-events-auto" : "pointer-events-none"
-          } `}
+      className={`mobileNav / flex justify-center items-center / fixed top-0 left-0 h-full w-full z-[999]
+          bg-mainColor3/70 backdrop-blur-sm  ${nav ? "pointer-events-auto" : "pointer-events-none"
+        } `}
     >
       <div
         ref={navigationRef}
@@ -101,11 +102,12 @@ export default function MobileNav({ hideNav, nav }: params) {
       >
         {trail.map((props, index) => (
           <AnchorRoute
+            onClick={handleContactClick}
             styles={props}
             key={index}
             text={navLinks[index].text}
             type={index < 3 ? "anchor" : "contact"}
-            path={navLinks[index].path}
+            path={navLinks[index].path!}
           />
         ))}
         <div
@@ -142,11 +144,13 @@ function AnchorRoute({
   styles,
   type,
   path,
+  onClick
 }: {
   type: string;
   path: string;
   styles: any;
   text: string;
+  onClick: (navigate: any) => void
 }) {
   switch (type) {
     case "anchor":
@@ -160,43 +164,19 @@ function AnchorRoute({
         </animated.a>
       );
     case "contact":
+      const navigate = useNavigate()
       return (
         <animated.div
           style={styles}
-          className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}
-        >
-          <MyButton text={"Contact Us"} type={""} form={""} className={""} />
+          className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}>
+          <MyButton onClick={onClick} text={"Contact Us"} type={""} form={""} className={""} />
         </animated.div>
-      );
+      )
+      default:
+      return (
+        <div>
+          None
+        </div>
+      )
   }
-
-    switch (type) {
-        case "anchor":
-            return (
-                <animated.a
-                    style={styles}
-                    href="#" className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}>
-                    {text}
-                </animated.a>
-            )
-        case "contact":
-            return (
-                <animated.div
-                    style={styles}
-                    className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}>
-                    <MyButton text={"Contact Us"} type={""} form={""} className={""} />
-                </animated.div>
-            )
-
-            default:
-              return (
-                <animated.a
-                  style={styles}
-                  href="#"
-                  className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}
-                >
-                  {text}
-                </animated.a>
-              );
-          }
-        }
+}

@@ -8,7 +8,7 @@ import MyButton from "../lib/elements/myButton";
 import { useRef } from "react";
 import useIntersection from "../lib/useIntersection";
 
-export default function Hero() {
+export default function Hero({onContactClick} : {onContactClick:(navigate:any) => void}) {
   const heroRef = useRef<HTMLDivElement>(null)
   const heroVisible = useIntersection(heroRef, "0px")
 
@@ -34,7 +34,7 @@ export default function Hero() {
           business with our ecommerce websites, mobile apps, and digital
           systems.
         </MyText>
-        <MyButton className={`transition-all delay-[400ms] duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
+        <MyButton onClick={onContactClick} className={`transition-all delay-[400ms] duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
       </div>
     </section>
   );

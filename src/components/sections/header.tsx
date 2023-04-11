@@ -50,7 +50,7 @@ export default function HeaderNav({ showNav, nav }: params) {
   return (
     <div
       ref={navRef}
-      className={`headerNav / flex justify-between items-center / transition-all duration-300 
+      className={`headerNav / flex justify-between items-center / transition-all duration-300 z-[999]
          ${
            scrollPosition > 80
              ? " bgLinear backdrop-blur-sm "
@@ -87,7 +87,7 @@ export default function HeaderNav({ showNav, nav }: params) {
           About Us
         </a>
         <a
-          href="#"
+          href="/blogs"
           className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[600ms]  ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           } `}

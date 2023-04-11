@@ -2,10 +2,10 @@ import MyIcons from "../lib/myicons";
 import { MyText } from "../lib/texts/myText";
 import MyButton from "../lib/elements/myButton";
 import emailjs from 'emailjs-com';
-import { useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import useIntersection from "../lib/useIntersection";
 
-export default function ContactUs() {
+export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
   const SERVICE_ID = "service_lzdo1qu";
   const TEMPLATE_ID = "template_shr24zk";
   const USER_ID = "bKJefEiNRnoGbJflQ";
@@ -40,12 +40,13 @@ export default function ContactUs() {
 
   return (
     <div
-      ref={contactRef}
+      ref={myRef}
+      id="contact-section"
       className={`contact / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 `}>
       <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}  `}>
         Contact Us
       </MyText>
-      <div className="contactWrapper /  flex flex-col md:flex-row justify-center items-center  gap-5 /  w-full  relative">
+      <div ref={contactRef} className="contactWrapper /  flex flex-col md:flex-row justify-center items-center  gap-5 /  w-full  relative">
         <div className={`info flex-1 md:flex flex-col gap-6 / hidden transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/3"}`}>
           <MyText type={"h2"} className={"text-thirdColor font-bold "}>
             Tell us about your Idea and we will be with you asap!
