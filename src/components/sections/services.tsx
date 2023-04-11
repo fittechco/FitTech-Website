@@ -25,7 +25,7 @@ function ServiceCards() {
     return (
         <div className="seviceCardsContainer / flex flex-wrap justify-center gap-4 md:gap-6 /  ">
             {data.services.map((service) => (
-                <ServiceCard image={service.url} title={service.title} description={service.description} icon={service.icon}/>
+                <ServiceCard image={service.image} title={service.title} description={service.description} icon={service.icon}/>
             ))}
         </div>
     )

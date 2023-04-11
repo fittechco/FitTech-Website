@@ -18,25 +18,25 @@
             "title": "Ecommerce",
             "description": "Our ecommerce websites are optimized for search engines and are integrated with secure payment gateways, making it easy for customers to shop and purchase products from your store. With our expertise in ecommerce, we can help you increase your online presence, expand your customer base, and grow your revenue.",
             "icon": "ecom",
-            "url": "../../assets/fitEom.png"
+            "image": "/src/assets/fitEom.png"
         },
         {
             "title": "Digital Systems",
             "description": "Our agency's digital systems service can help you streamline your fitness business operations with custom-built digital solutions. From membership management to online scheduling, we can create a system that's tailored to your unique needs. ",
             "icon": "system",
-            "url": "../../assets/fitEom.png"
+            "image": "/src/assets/system.png"
         },
         {
             "title": "Mobile Apps",
             "description": "With our agency's mobile app service, you can take your fitness business to the next level. We can design and develop a custom mobile app that enhances the user experience and offers a range of features such as workout tracking, class scheduling, and nutrition tracking. ",
             "icon": "app",
-            "url": "../../assets/fitEom.png"
+            "image": "/src/assets/app.png"
         },
         {
             "title": "Web Design",
             "description": "Our team of expert designers will work with you to create a website that accurately reflects your brand and helps you stand out from the competition. Whether you need a new website or want to revamp your existing one, our web design service can help you achieve your goals.",
             "icon": "design",
-            "url": "../../assets/fitEom.png"
+            "image": "/src/assets/design.png"
         }
     ]
 }
