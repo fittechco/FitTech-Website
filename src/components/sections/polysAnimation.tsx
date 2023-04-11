@@ -121,7 +121,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 14,
                     y: 6.5
                 }} />
-                <LogoPoly className="absolute top-[25.5%] left-[24.5%]" />
+                <LogoPoly visible={visible} className="absolute top-[25.5%] left-[24.5%]" />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 export function Polygon({ className }: { className: string }) {
     return (
-        <svg className={className + " w-[152px] h-[176px]"} width="185" height="213" viewBox="0 0 185 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={className + " w-[152px] h-[176px] bg-transparent"} width="185" height="213" viewBox="0 0 185 213" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_i_135_287)">
                 <path d="M92.5 0L184.732 53.25V159.75L92.5 213L0.268295 159.75V53.25L92.5 0Z" fill="#133E63" />
             </g>

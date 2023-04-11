@@ -59,7 +59,7 @@ export default function HeaderNav({ showNav, nav }: params) {
         scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
       } w-full h-20 p-6 md:px-20 fixed top-0 z-20`}
     >
-      <div className="agencyName">
+      <a href="/" className="agencyName">
         <MyText
           type={"h3"}
           className={`font-bold text-thirdColor transition-all duration-500 ease-in-out  ${
@@ -68,11 +68,11 @@ export default function HeaderNav({ showNav, nav }: params) {
         >
           FitTech
         </MyText>
-      </div>
+      </a>
       <div className="navigations / md:flex gap-8 / hidden  ">
         <a
           href="/"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[400ms] ${
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-200 ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           }`}
         >
@@ -80,7 +80,7 @@ export default function HeaderNav({ showNav, nav }: params) {
         </a>
         <a
           href="/about"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-200 ${
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[400ms] ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           } `}
         >

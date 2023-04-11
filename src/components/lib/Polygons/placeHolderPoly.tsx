@@ -1,6 +1,6 @@
 export function PlaceHolderPoly({ className }: { className: string }) {
     return (
-        <svg className={className} width="711" height="653" viewBox="0 0 711 653" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={className +" bg-transparent"} width="711" height="653" viewBox="0 0 711 653" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_i_135_276)">
                 <path d="M534.504 300.65L621.911 351.115V452.044L534.504 502.508L447.097 452.044V351.115L534.504 300.65Z" fill="#133E63" />
             </g>

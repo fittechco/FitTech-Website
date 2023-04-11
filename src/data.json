@@ -1,0 +1,42 @@
+{
+    "AboutUs" : [
+        {
+            "title": "Who We Are",
+            "description": "FitTech is a startup agency that specializes in providing technology and services to the fitness industry. Founded by Mohamad Hamoud and Ali Fouani, our company is driven by a passion for helping gym businesses and supplement stores succeed.At FitTech, we believe that technology can help bridge the gap between the fitness world and the digital world. We work tirelessly to provide our clients with innovative solutions that make it easier to manage their businesses, sell their products, and reach their goals."
+        },
+        {
+            "title": "Our Vision",
+            "description": "At FitTech, our vision is to be the leading provider of technology and services for the fitness industry. We want to empower gym businesses and supplement stores with the tools they need to succeed, and we want to make it easier for fitness professionals to manage their businesses and sell their products."
+        },
+        {
+            "title": "Our Mission",
+            "description": "Our mission at FitTech is to provide our clients with the best possible service and the most innovative solutions. We are committed to helping gym businesses and supplement stores achieve their goals by providing them with customized technology and services that meet their specific needs. We are dedicated to staying ahead of the curve and delivering the latest and greatest in fitness technology to our clients."
+        }
+    ],
+    "services":[
+        {
+            "title": "Ecommerce",
+            "description": "Our ecommerce websites are optimized for search engines and are integrated with secure payment gateways, making it easy for customers to shop and purchase products from your store. With our expertise in ecommerce, we can help you increase your online presence, expand your customer base, and grow your revenue.",
+            "icon": "ecom",
+            "url": "../../assets/fitEom.png"
+        },
+        {
+            "title": "Digital Systems",
+            "description": "Our agency's digital systems service can help you streamline your fitness business operations with custom-built digital solutions. From membership management to online scheduling, we can create a system that's tailored to your unique needs. ",
+            "icon": "system",
+            "url": "../../assets/fitEom.png"
+        },
+        {
+            "title": "Mobile Apps",
+            "description": "With our agency's mobile app service, you can take your fitness business to the next level. We can design and develop a custom mobile app that enhances the user experience and offers a range of features such as workout tracking, class scheduling, and nutrition tracking. ",
+            "icon": "app",
+            "url": "../../assets/fitEom.png"
+        },
+        {
+            "title": "Web Design",
+            "description": "Our team of expert designers will work with you to create a website that accurately reflects your brand and helps you stand out from the competition. Whether you need a new website or want to revamp your existing one, our web design service can help you achieve your goals.",
+            "icon": "design",
+            "url": "../../assets/fitEom.png"
+        }
+    ]
+}

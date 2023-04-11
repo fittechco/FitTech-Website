@@ -12,7 +12,8 @@ export default function ContactUs() {
   const [success, setSuccess] = useState(false)
   const [failed, setFailed] = useState(false)
   const contactRef = useRef<HTMLDivElement>(null)
-  const visible = useIntersection(contactRef, "-50px")
+
+  const visible = useIntersection(contactRef, "-200px")
 
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
@@ -39,13 +40,13 @@ export default function ContactUs() {
 
   return (
     <div
-    ref={contactRef}
-     className={`contact / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 `}>
-      <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-500 ease-in-out  ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}  `}>
+      ref={contactRef}
+      className={`contact / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 `}>
+      <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}  `}>
         Contact Us
       </MyText>
       <div className="contactWrapper /  flex flex-col md:flex-row justify-center items-center  gap-5 /  w-full  relative">
-        <div className={`info flex-1 md:flex flex-col gap-6 / hidden transition-all duration-500 ease-in-out delay-200 ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"}`}>
+        <div className={`info flex-1 md:flex flex-col gap-6 / hidden transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/3"}`}>
           <MyText type={"h2"} className={"text-thirdColor font-bold "}>
             Tell us about your Idea and we will be with you asap!
           </MyText>
@@ -58,7 +59,8 @@ export default function ContactUs() {
             </MyText>
           </div>
         </div>
-        <div className={`contactForm / flex-1 flex flex-col gap-20 / hero h-full w-full formShadow p-6 rounded-lg  mx-auto relative z-40 transition-all duration-500 ease-in-out delay-500 ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"}`}>
+        <div className={`contactForm / flex-1 flex flex-col gap-20 / hero h-full w-full formShadow p-6 rounded-lg
+          mx-auto relative z-40 transition-all duration-1000 ease-in-out delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"}`}>
           <MyText
             type={"h3"}
             className={" text-thirdColor font-bold text-center"}
@@ -106,7 +108,7 @@ export default function ContactUs() {
             </label>
             <MyButton text={"Submit"} type={""} form={"contactForm"} className={""} />
           </div>
-          <SuccessPopUp success={success} failed={false} />
+          <SuccessPopUp success={success} failed={failed} />
         </div>
       </div>
     </div>
@@ -117,13 +119,13 @@ export default function ContactUs() {
 
 function SuccessPopUp({ success, failed }: { success: boolean, failed: boolean }) {
   return (
-    <div className={`successPopup / flex justify-center items-center  / transition-all ${success || failed ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute w-full h-full bg-mainColor/70 backdrop-blur-sm top-0 left-0 `}>
+    <div className={`successPopup / flex justify-center items-center  / transition-all ease-in-out duration-500 ${success || failed ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute w-full h-full bg-mainColor/70 backdrop-blur-sm top-0 left-0 `}>
       <div className="relative">
-        <div className={`wrapper / flex items-center justify-center   / transition-all ${success ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
+        <div className={`wrapper / flex items-center justify-center   / transition-all ease-in-out duration-500 ${success ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
           <MyText type={"h2"} className={"font-bold text-accentColor"}>Success!</MyText>
         </div>
-        <div className={`wrapper / flex items-center justify-center   / absolute top-0 transition-all ${failed ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
-          <MyText type={"h2"} className={"font-bold text-accentColor"}>Failed!</MyText>
+        <div className={`wrapper / flex items-center justify-center   / absolute top-0 transition-all ease-in-out duration-500 ${failed ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}  `}>
+          <MyText type={"h2"} className={"font-bold text-red-600"}>Failed!</MyText>
         </div>
       </div>
     </div>

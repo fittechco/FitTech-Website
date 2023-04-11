@@ -4,7 +4,7 @@ import useIntersection from "../lib/useIntersection";
 
 export default function Footer() {
     const footerRef = useRef<HTMLDivElement>(null)
-    const visible = useIntersection(footerRef, "0px")
+    const visible = useIntersection(footerRef, "-80px")
     
     return (
         <div 
