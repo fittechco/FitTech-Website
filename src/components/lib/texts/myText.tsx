@@ -18,7 +18,7 @@ export function MyText({
             )
         case "h3":
             return (
-                <h1 className={className + " h3Text / font-montserrat text-2xl md:text-4xl "}>{children}</h1>
+                <h1 className={className + " h3Text / font-montserrat text-2xl md:text-3xl lg:text-4xl "}>{children}</h1>
             )
         case "h4":
             return (

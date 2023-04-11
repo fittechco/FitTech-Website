@@ -61,7 +61,7 @@ function DisplayAbout({
       >
         <div className={`flex flex-col gap-6 `}>
           <MyText
-            type={"h2"}
+            type={"h3"}
             className={
               "text-thirdColor font-bold border-b border-accentColor w-fit pb-3"
             }
