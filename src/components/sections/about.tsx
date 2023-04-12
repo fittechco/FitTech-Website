@@ -3,7 +3,7 @@ import MyButton from "../lib/elements/myButton";
 import { useRef } from "react";
 import useIntersection from "../lib/useIntersection";
 import { Link } from "react-router-dom";
-import aboutUsImg from "../../assets/aboutUsImg.png"
+import aboutUsImg from "../../../public/aboutUsImg.png"
 export default function About() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
 

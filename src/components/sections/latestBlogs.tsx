@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { MyText } from "../lib/texts/myText";
 import useIntersection from "../lib/useIntersection";
-import blogImg from "../../assets/blogimg.png"
+import blogImg from "../../../public/blogimg.png"
 
 export default function LatestBlogs() {
     const blogRef = useRef<HTMLDivElement>(null)

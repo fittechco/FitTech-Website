@@ -1,4 +1,4 @@
-import codeVid from '../../../assets/codingVid.mp4'
+import codeVid from "../../../../public/codingVid.mp4"
 import { LogoPoly } from '../../lib/Polygons/logoPoly'
 import MainPoly from '../../lib/Polygons/mainPoly'
 import { MyText } from '../../lib/texts/myText'
