@@ -33,6 +33,7 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
         console.log(error.text);
       });
     e.target.reset()
+    console.log(e.target);
   };
   
   const textAreaRef = useRef<HTMLTextAreaElement>(null)
@@ -108,15 +109,15 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
           </form>
 
           <div className="flex flex-col gap-6">
-            <label htmlFor="file" className="cursor-pointer hover:-translate-y-1 transition-all w-fit ">
+            {/* <label htmlFor="file" className="cursor-pointer hover:-translate-y-1 transition-all w-fit ">
               <div className="flex gap-4">
                 <MyIcons className={""} icon={"attach"} />
                 <MyText type={"p"} className={"text-thirdColor3  font-bold "}>
                   Add Attachment
                 </MyText>
               </div>
-              <input id="file" type="file" name="file" className="hidden" />
-            </label>
+              <input form="contactForm" id="file" type="file" name="file" className="hidden" />
+            </label> */}
             <MyButton text={"Submit"} type={""} form={"contactForm"} className={""} />
           </div>
           <SuccessPopUp success={success} failed={failed} />

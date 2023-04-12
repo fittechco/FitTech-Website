@@ -19,7 +19,7 @@ export default function Hero({onContactClick} : {onContactClick:(navigate:any) =
       <Polygon className={`-z-[1] absolute top-[40%] left-[0%]  lg:-left-[4%]  transition-all duration-1000 ease-in-out  md:block delay-100 ${heroVisible? "scale-75 lg:scale-100":"scale-0"} `} />
       <Polygon className={`-z-[1] absolute top-[20%] left-[20%] lg:left-[25%] transition-all duration-1000  ease-in-out  delay-150 ${heroVisible? "scale-50 lg:scale-75":"scale-0"}`} />
       <Polygon className={`-z-[1] absolute top-[8%]  left-[60%] lg:left-[45%] transition-all duration-1000 ease-in-out  delay-200 hidden md:static  ${heroVisible? "scale-50 lg:scale-75 ":"scale-0"}`} />
-      <LogoPoly visible={heroVisible} className={`-z-[1] absolute md:hidden top-[15%]  left-[60%] lg:left-[45%] w-[100px] h-[100px] `}/>
+      <LogoPoly visible={heroVisible} className={`-z-[1] absolute md:hidden top-[15%]  left-[60%] lg:left-[45%] w-[92px] h-[92px] `}/>
       <Polygon className={`-z-[1] absolute top-[70%] left-[10%] lg:left-[10%] transition-all duration-1000 ease-in-out delay-[250] ${heroVisible? "scale-[60%]":"scale-0"} `} />
       <Polygon className={`-z-[1] absolute top-[50%] left-[30%] lg:left-[15%] transition-all duration-1000 ease-in-out delay-300  ${heroVisible? "scale-[50%]":"scale-0"}`} />
       <Polygon className={`-z-[1] absolute top-[70%] left-[55%] lg:left-[40%]  transition-all delay-[350] duration-500 ease-in-out ${heroVisible? "scale-75 lg:scale-100":"scale-0"}`} />
