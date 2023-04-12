@@ -6,7 +6,7 @@ import HeaderNav from "./components/sections/header";
 import MobileNav, { controlNav } from "./components/sections/mobileNav";
 import Footer from "./components/sections/footer";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   useLocation,
