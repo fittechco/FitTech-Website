@@ -43,7 +43,7 @@
             "title": "Web Design",
             "description": "Our team of expert designers will work with you to create a website that accurately reflects your brand and helps you stand out from the competition. Whether you need a new website or want to revamp your existing one, our web design service can help you achieve your goals.",
             "icon": "design",
-            "imagedesign.png"
+            "image": "/design.png"
         }
     ]
 }
