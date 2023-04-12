@@ -18,9 +18,9 @@ export default function LatestBlogs() {
                     <div className={`blogCard bg-mainColor/60 absolute top-0  z-10 rounded-lg w-full h-96 `}></div>
                     <img src={blogImg} alt="" className="object-cover object-top z-0" />
                     <div className="blogInfo / flex flex-col gap-4 justify-start items-start / z-20  absolute m-5 ">
-                        <MyText type={"p"} className={`font-light text-thirdColor transition-all duration-1000 ease-in-out delay-500 ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `} >Unknow - ?? ?? ????</MyText>
+                        {/* <MyText type={"p"} className={`font-light text-thirdColor transition-all duration-1000 ease-in-out delay-500 ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `} ></MyText> */}
                         <MyText type={"h3"} className={`font-bold text-thirdColor transition-all duration-1000 ease-in-out delay-700 ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `} >Coming Soon</MyText>
-                        <MyText type={"p"} className={`font-light text-thirdColor max-w-2xl transition-all duration-1000 ease-in-out delay-[900ms] ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `} >abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</MyText>
+                        {/* <MyText type={"p"} className={`font-light text-thirdColor max-w-2xl transition-all duration-1000 ease-in-out delay-[900ms] ${visible? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `} ></MyText> */}
                     </div>
                 </div>
             </div>
