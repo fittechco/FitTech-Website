@@ -34,9 +34,18 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
       });
     e.target.reset()
   };
+  
+  const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
-
-
+  useEffect(() => {
+    const handleHeight = () => {
+        textAreaRef.current!.style.height = textAreaRef.current?.scrollHeight + "px"
+    } 
+     textAreaRef.current! && textAreaRef.current!.addEventListener("keyup", handleHeight)
+    return () => {
+        textAreaRef.current && textAreaRef.current!.removeEventListener("keyup", handleHeight)
+    } 
+} ,[])
 
   return (
     <div
@@ -84,12 +93,13 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
               name="email"
               required
               placeholder="Your email"
-              className="border-b text-lg md:text-2xl placeholder:text-thirdColor3 text-thirdColor
+              className="border-b text-lg md:text-2xl  placeholder:text-thirdColor3 text-thirdColor
                          border-thirdColor bg-transparent focus:outline-none rounded"
             />
             <textarea
               name="message"
               required
+              ref={textAreaRef}
               placeholder="Tell us about your project"
               className="border-b text-lg md:text-2xl h-8 overflow-hidden placeholder:text-thirdColor3 text-thirdColor
                          border-thirdColor bg-transparent focus:outline-none rounded"
