@@ -62,7 +62,7 @@ export default function HeaderNav({ showNav, nav }: params) {
       <a href="/" className="agencyName">
         <MyText
           type={"h3"}
-          className={`font-bold text-thirdColor transition-all duration-500 ease-in-out  ${
+          className={`font-bold text-thirdColor transition-all duration-1000 ease-in-out  ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           }`}
         >
@@ -72,7 +72,7 @@ export default function HeaderNav({ showNav, nav }: params) {
       <div className="navigations / md:flex gap-8 / hidden  ">
         <a
           href="/"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-200 ${
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-200 ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           }`}
         >
@@ -80,7 +80,7 @@ export default function HeaderNav({ showNav, nav }: params) {
         </a>
         <a
           href="/about"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[400ms] ${
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[400ms] ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           } `}
         >
@@ -88,7 +88,7 @@ export default function HeaderNav({ showNav, nav }: params) {
         </a>
         <a
           href="/blogs"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-500 ease-in-out delay-[600ms]  ${
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[600ms]  ${
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
           } `}
         >
@@ -97,7 +97,7 @@ export default function HeaderNav({ showNav, nav }: params) {
       </div>
       <div
         onClick={() => showNav()}
-        className={` navMenu // cursor-pointer md:hidden transition-all duration-500 ease-in-out delay-200 ${
+        className={` navMenu // cursor-pointer md:hidden transition-all duration-1000 ease-in-out delay-200 ${
           visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`}
       >
         <MyIcons className={""} icon={"navMenu"} />
