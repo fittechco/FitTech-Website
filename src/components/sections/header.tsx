@@ -97,7 +97,8 @@ export default function HeaderNav({ showNav, nav }: params) {
       </div>
       <div
         onClick={() => showNav()}
-        className="navMenu // cursor-pointer md:hidden"
+        className={` navMenu // cursor-pointer md:hidden transition-all duration-500 ease-in-out delay-200 ${
+          visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`}
       >
         <MyIcons className={""} icon={"navMenu"} />
       </div>

@@ -24,7 +24,6 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
         setTimeout(() => {
           setSuccess(false)
         }, 2000);
-        console.log(result.text);
       }, (error) => {
         setFailed(true)
         setTimeout(() => {

@@ -1,6 +1,4 @@
 import { MyText } from "../lib/texts/myText";
-import ecoStore from "../../assets/fitEom.png"
-import MyIcons from "../lib/myicons";
 import useIntersection from "../lib/useIntersection";
 import { useRef } from "react";
 import ServiceCard from "../cards/serviceCard";

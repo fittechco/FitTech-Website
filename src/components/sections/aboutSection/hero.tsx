@@ -7,7 +7,7 @@ import { MyText } from '../../lib/texts/myText'
 export default function Hero({ visible }: { visible: boolean }) {
     return (
         <div className="aboutHero / flex justify-start items-center  / mt-24 md:mt-0 md:min-h-screen w-full relative hero ">
-            <video className=" w-full h-full " width="2200" height="2200" autoPlay muted loop>
+            <video className=" w-full h-full pointer-events-none " draggable={false}  width="2200" height="2200" autoPlay muted loop>
                 <source src={codeVid} className='' type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

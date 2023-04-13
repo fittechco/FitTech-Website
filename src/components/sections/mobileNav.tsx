@@ -1,6 +1,6 @@
+import MyIcons from "../lib/myicons";
 import { AnchorHTMLAttributes, useEffect, useRef, useState } from "react";
 import MyButton from "../lib/elements/myButton";
-import MyIcons from "../lib/myicons";
 import {
   SpringValues,
   animated,

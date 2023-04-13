@@ -1,6 +1,5 @@
 import About from "../about";
 import { MyText } from "../../lib/texts/myText";
-import MyButton from "../../lib/elements/myButton";
 import { useRef } from "react";
 import useIntersection from "../../lib/useIntersection";
 import Hero from "./hero";
@@ -10,7 +9,6 @@ export default function AboutUs() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
 
   const visible = useIntersection(aboutUsRef, "00px");
-  console.log(visible);
   return (
     <div className="aboutUs / flex / w-full h-full / ">
       <div
