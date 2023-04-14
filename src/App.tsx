@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import HomePage from "./components/routes/homePage";
 import AboutPage from "./components/routes/aboutPage";
@@ -36,17 +36,28 @@ function App() {
   }
 
   return (
-      <div className="App h-full w-full relative">
-        <HeaderNav nav={nav} showNav={showNav} />
-        <MobileNav handleContactClick={handleContactClick} hideNav={hideNav} nav={nav} />
-        <Routes>
-          <Route path="/" element={<HomePage contactRef={contactRef} handleContactClick={handleContactClick} />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blogs" element={<Blog />} />
-        </Routes>
-        <Footer />
-      </div>
+    <div className="App h-full w-full relative">
+      <HeaderNav nav={nav} showNav={showNav} />
+      <MobileNav handleContactClick={handleContactClick} hideNav={hideNav} nav={nav} />
+      <ScrollToTopOnRouteChange />
+      <Routes>
+        <Route path="/" element={<HomePage contactRef={contactRef} handleContactClick={handleContactClick} />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blogs" element={<Blog />} />
+      </Routes>
+      <Footer />
+    </div>
   );
+}
+
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 export default App;
