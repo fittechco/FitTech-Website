@@ -10,7 +10,7 @@ type params = {
 
 export default function HeaderNav({ showNav, nav }: params) {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState("none");
+  const [scrollDirection, setScrollDirection] = useState("");
   const navRef = useRef<HTMLDivElement>(null);
   const visible = useIntersection(navRef, "0px");
 
@@ -46,25 +46,22 @@ export default function HeaderNav({ showNav, nav }: params) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+console.log(scrollPosition);
   return (
     <div
       ref={navRef}
       className={`headerNav / flex justify-between items-center / transition-all duration-300 z-[999]
-         ${
-           scrollPosition > 80
-             ? " bgLinear backdrop-blur-sm "
-             : " bgLinearOff  backdrop-blur-0 "
-         } ${
-        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
-      } w-full h-20 p-6 md:px-20 fixed top-0 z-20`}
+         ${scrollPosition > 80
+          ? " bgLinear backdrop-blur-sm "
+          : " bgLinearOff  backdrop-blur-0 "
+        } ${scrollDirection === "down" && scrollPosition > 80 ? "-translate-y-full" : "translate-y-0"
+        } w-full h-20 p-6 md:px-20 fixed top-0 z-20`}
     >
       <a href="/" className="agencyName">
         <MyText
           type={"h3"}
-          className={`font-bold text-thirdColor transition-all duration-1000 ease-in-out  ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
-          }`}
+          className={`font-bold text-thirdColor transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            }`}
         >
           FitTech
         </MyText>
@@ -72,33 +69,29 @@ export default function HeaderNav({ showNav, nav }: params) {
       <div className="navigations / md:flex gap-8 / hidden  ">
         <a
           href="/"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-200 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
-          }`}
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            }`}
         >
           Home
         </a>
         <a
           href="/about"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[400ms] ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
-          } `}
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[400ms] ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            } `}
         >
           About Us
         </a>
         <a
           href="/blogs"
-          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[600ms]  ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
-          } `}
+          className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[600ms]  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            } `}
         >
           Blogs
         </a>
       </div>
       <div
         onClick={() => showNav()}
-        className={` navMenu // cursor-pointer md:hidden transition-all duration-1000 ease-in-out delay-200 ${
-          visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`}
+        className={` navMenu // cursor-pointer md:hidden transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}`}
       >
         <MyIcons className={""} icon={"navMenu"} />
       </div>
