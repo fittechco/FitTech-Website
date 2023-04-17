@@ -27,7 +27,7 @@ export default function Hero({onContactClick} : {onContactClick:(navigate:any) =
       <PolysAnimation visible={heroVisible} />
       <div className="heroInfo / flex flex-col gap-6 md:gap-8 / z-10 md:mt-6 antialiased ">
         <MyText type={"h2"} className={`text-thirdColor font-bold  md:max-w-md lg:max-w-3xl transition-all duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-          Fitness meets technology: Solutions for the modern fitness industry
+        DIGITAL SOLUTIONS THAT DRIVE RESULTS: UNLEASH YOUR BUSINESS POTENTIAL WITH FITTECH
         </MyText>
         <MyText type={"p"} className={`text-thirdColor3 antialiased  md:max-w-lg transition-all ease-in-out duration-1000 delay-200 ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
           Customized fitness solutions for gym owners, personal trainers,
