@@ -46,7 +46,6 @@ export default function HeaderNav({ showNav, nav }: params) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-console.log(scrollPosition);
   return (
     <div
       ref={navRef}

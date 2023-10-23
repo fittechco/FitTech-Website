@@ -29,10 +29,8 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
         setTimeout(() => {
           setFailed(false)
         }, 2000);
-        console.log(error.text);
       });
     e.target.reset()
-    console.log(e.target);
   };
   
   const textAreaRef = useRef<HTMLTextAreaElement>(null)

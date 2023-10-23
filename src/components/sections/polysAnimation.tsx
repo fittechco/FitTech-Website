@@ -7,7 +7,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
         <div className="polyContainer hidden lg:block absolute top-[12%] right-0 w-fit h-fit scale-50 lg:scale-100">
             <div className="polyWrapper relative">
                 <PlaceHolderPoly className="  w-[620px]" />
-                <MainPoly visible={visible} title="Landing Pages" className="delay-[200ms]  " mainPos={{
+                <MainPoly visible={visible} title="Shopify eCommerce Websites" className="delay-[200ms]  " mainPos={{
                     x: 14,
                     y: 6.5
                 }} scatter={{
@@ -26,7 +26,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 62.6,
                     y: 46.4
                 }} />
-                <MainPoly visible={visible} title="Gyms" className="delay-[400ms] " mainPos={{
+                <MainPoly visible={visible} title="Web Design" className="delay-[400ms] " mainPos={{
                     x: 38.3,
                     y: 6.5
                 }} scatter={{
@@ -45,7 +45,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 38.3,
                     y: 6.5
                 }} />
-                <MainPoly visible={visible} title="Digital Systems" className="delay-[600ms] " mainPos={{
+                <MainPoly visible={visible} title="Shopify App Integration" className="delay-[600ms] " mainPos={{
                     x: 50.7,
                     y: 26.6
                 }} scatter={{
@@ -64,7 +64,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 50.7,
                     y: 26.6
                 }} />
-                <MainPoly visible={visible} title="Mobile Apps" className="delay-[800ms]" mainPos={{
+                <MainPoly visible={visible} title="Shopify Mobile Apps" className="delay-[800ms]" mainPos={{
                     x: 38,
                     y: 46.7
                 }} scatter={{
@@ -83,7 +83,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 38,
                     y: 46.7
                 }} />
-                <MainPoly visible={visible} title="Ecommerce Website" className="delay-[1000ms]" mainPos={{
+                <MainPoly visible={visible} title="Shopify SEO Optimization" className="delay-[1000ms]" mainPos={{
                     x: 13.8,
                     y: 46.7
                 }} scatter={{
@@ -102,7 +102,7 @@ export default function PolysAnimation({visible}:{visible:boolean}) {
                     x: 62.7,
                     y: 6.5
                 }} />
-                <MainPoly visible={visible} title="Supplements stores" className="delay-[1200ms] " mainPos={{
+                <MainPoly visible={visible} title="Shopify Storefront Setup" className="delay-[1200ms] " mainPos={{
                     x: 1.5,
                     y: 26.6
                 }} scatter={{

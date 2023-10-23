@@ -14,7 +14,7 @@ export default function Hero({onContactClick} : {onContactClick:(navigate:any) =
 
   return (
     // creating hero section wich will take full width and height of the current screen
-    <section ref={heroRef} className="hero flex items-center / w-full h-full  bg-white  relative overflow-hidden z-10 px-6 md:px-20 min-h-[112vh]">
+    <section ref={heroRef} className="hero flex items-center / w-full h-full relative overflow-hidden z-10 px-6 md:px-20 min-h-[112vh]">
       <Polygon className={`-z-[1] absolute top-[3%] left-0 transition-all duration-1000 ease-in-out  ${heroVisible? "scale-50":"scale-0"}   `}/>
       <Polygon className={`-z-[1] absolute top-[40%] left-[0%]  lg:-left-[4%]  transition-all duration-1000 ease-in-out  md:block delay-100 ${heroVisible? "scale-75 lg:scale-100":"scale-0"} `} />
       <Polygon className={`-z-[1] absolute top-[20%] left-[20%] lg:left-[25%] transition-all duration-1000  ease-in-out  delay-150 ${heroVisible? "scale-50 lg:scale-75":"scale-0"}`} />
@@ -26,14 +26,19 @@ export default function Hero({onContactClick} : {onContactClick:(navigate:any) =
       <Polygon className={`-z-[1] absolute top-[40%] left-[70%]  md:block lg:hidden transition-all duration-1000 ease-in-out delay-[400] ${heroVisible? "scale-50 md:scale-75":"scale-0"}`} />
       <PolysAnimation visible={heroVisible} />
       <div className="heroInfo / flex flex-col gap-6 md:gap-8 / z-10 md:mt-6 antialiased ">
-        <MyText type={"h2"} className={`text-thirdColor font-bold  md:max-w-md lg:max-w-3xl transition-all duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-        DIGITAL SOLUTIONS THAT DRIVE RESULTS: UNLEASH YOUR BUSINESS POTENTIAL WITH FITTECH
+        <MyText type={"h2"} className={`text-thirdColor capitalize font-bold md:max-w-md lg:max-w-3xl transition-all duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
+        {/* DIGITAL SOLUTIONS THAT DRIVE RESULTS: UNLEASH YOUR BUSINESS POTENTIAL WITH FITTECH */}
+        {/* Boost Your Beauty & Fitness Business with Shopify */}
+        {/* Your Journey to Beauty & Fitness Success Starts Here */}
+        Discover What's Beyond the Limits
         </MyText>
         <MyText type={"p"} className={`text-thirdColor3 antialiased  md:max-w-lg transition-all ease-in-out duration-1000 delay-200 ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-          Customized fitness solutions for gym owners, personal trainers,
+          {/* Customized fitness solutions for gym owners, personal trainers,
           supplement store owners, and fitness enthusiasts. Grow your fitness
           business with our ecommerce websites, mobile apps, and digital
-          systems.
+          systems. */}
+          {/* Tailored Shopify  */}
+          Shopify Ecommerce Websites that Convert for Maximum Business Potential
         </MyText>
         <MyButton onClick={onContactClick} className={`transition-all delay-[400ms] duration-1000 ease-in-out ${heroVisible? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
       </div>

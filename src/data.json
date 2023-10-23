@@ -3,45 +3,49 @@
     "AboutUs" : [
         {
             "title": "Who We Are",
-            "description": "FitTech is a startup agency that specializes in providing technology and services to the fitness industry. Founded by Mohamad Hamoud and Ali Fouani, our company is driven by a passion for helping gym businesses and supplement stores succeed.At FitTech, we believe that technology can help bridge the gap between the fitness world and the digital world. We work tirelessly to provide our clients with innovative solutions that make it easier to manage their businesses, sell their products, and reach their goals.",
+            "olddescription": "FitTech is a startup agency that specializes in providing technology and services to the fitness industry. Founded by Mohamad Hamoud and Ali Fouani, our company is driven by a passion for helping gym businesses and supplement stores succeed.At FitTech, we believe that technology can help bridge the gap between the fitness world and the digital world. We work tirelessly to provide our clients with innovative solutions that make it easier to manage their businesses, sell their products, and reach their goals.",
+            "description": "FitTech is an innovative agency specializing in crafting tailored Shopify eCommerce websites that empower businesses in the beauty and fitness industry. Our founders, Mohamad Hamoud and Ali Fouani, are driven by a passion for helping businesses transform their online presence and maximize their potential.",
             "image": "/aboutUsImg.png"
 
         },
         {
             "title": "Our Vision",
-            "description": "At FitTech, our vision is to be the leading provider of technology and services for the fitness industry. We want to empower gym businesses and supplement stores with the tools they need to succeed, and we want to make it easier for fitness professionals to manage their businesses and sell their products.",
+            "olddescription": "At FitTech, our vision is to be the leading provider of technology and services for the fitness industry. We want to empower gym businesses and supplement stores with the tools they need to succeed, and we want to make it easier for fitness professionals to manage their businesses and sell their products.",
+            "description": "At FitTech, our vision is to be the premier provider of digital solutions for the beauty and fitness industry. We aim to equip businesses with cutting-edge eCommerce websites that not only showcase their vision but also drive remarkable results, boosting their online presence and conversions.",
+
             "image": "/vision.png"
 
         },
         {
             "title": "Our Mission",
-            "description": "Our mission at FitTech is to provide our clients with the best possible service and the most innovative solutions. We are committed to helping gym businesses and supplement stores achieve their goals by providing them with customized technology and services that meet their specific needs. We are dedicated to staying ahead of the curve and delivering the latest and greatest in fitness technology to our clients.",
+            "olddescription": "Our mission at FitTech is to provide our clients with the best possible service and the most innovative solutions. We are committed to helping gym businesses and supplement stores achieve their goals by providing them with customized technology and services that meet their specific needs. We are dedicated to staying ahead of the curve and delivering the latest and greatest in fitness technology to our clients.",
+            "description": "Our mission at FitTech is to deliver excellence through customized Shopify eCommerce websites that empower businesses to reach new heights. We are committed to ensuring beauty and fitness businesses achieve their goals by offering innovative and comprehensive digital solutions that cater to their unique needs. We are dedicated to staying at the forefront of eCommerce technology to provide unmatched value to our clients.",
             "image": "/mission.png"
 
         }
     ],
     "services":[
         {
-            "title": "Ecommerce",
-            "description": "Our ecommerce websites are optimized for search engines and are integrated with secure payment gateways, making it easy for customers to shop and purchase products from your store. With our expertise in ecommerce, we can help you increase your online presence, expand your customer base, and grow your revenue.",
+            "title": "Shopify Ecommerce Websites",
+            "description": "Our Shopify Ecommerce Website service is tailored to drive results for beauty and fitness businesses. We specialize in creating stunning Shopify websites that not only captivate your audience but also ensure seamless online shopping experiences. With a focus on high conversion rates and user-friendly design, we'll help you unlock your online potential.",
             "icon": "ecom",
             "image": "/fitEom.png"
         },
         {
-            "title": "Digital Systems",
-            "description": "Our agency's digital systems service can help you streamline your fitness business operations with custom-built digital solutions. From membership management to online scheduling, we can create a system that's tailored to your unique needs. ",
+            "title": "Shopify App Integration",
+            "description": "Enhance your Shopify store's functionality with our Shopify App Integration service. We'll seamlessly integrate apps that streamline operations, boost customer engagement, and maximize conversions. Count on us to optimize your Shopify store with the right apps for your business needs.",
             "icon": "system",
             "image": "/system.png"
         },
         {
-            "title": "Mobile Apps",
-            "description": "With our agency's mobile app service, you can take your fitness business to the next level. We can design and develop a custom mobile app that enhances the user experience and offers a range of features such as workout tracking, class scheduling, and nutrition tracking. ",
+            "title": "Shopify Mobile Apps",
+            "description": "Elevate your fitness business with our Shopify Mobile App service. We design and develop custom mobile apps that empower users with workout tracking, class scheduling, and nutrition monitoring. Our apps are tailored to provide an enriched fitness experience, keeping your clients engaged and motivated.",
             "icon": "app",
             "image": "/app.png"
         },
         {
             "title": "Web Design",
-            "description": "Our team of expert designers will work with you to create a website that accurately reflects your brand and helps you stand out from the competition. Whether you need a new website or want to revamp your existing one, our web design service can help you achieve your goals.",
+            "description": "Our Web Design service goes beyond aesthetics. We'll collaborate with you to create a website that not only reflects your brand but also enhances user engagement. Whether you're starting from scratch or refreshing an existing site, our designs are crafted to make your business stand out.",
             "icon": "design",
             "image": "/design.png"
         }
