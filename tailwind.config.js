@@ -4,11 +4,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily:{
+    fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif']
     },
     extend: {
-      colors:{
+      container: {
+        center: true,
+        padding: "1.25rem",
+        screens: {
+          "2xl": "1400px",
+        },
+      },
+      colors: {
         'mainColor': "#0C2840",
         'mainColor2': "#133E63",
         'mainColor3': "#091E2F",
@@ -19,7 +26,7 @@ export default {
         'thirdColor3': "#D9D9D9"
       }
     },
-   
+
   },
   plugins: [],
 }

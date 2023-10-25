@@ -9,10 +9,10 @@ export default function Services() {
     const serviceContaienerRef = useRef<HTMLDivElement>(null)
     const visible = useIntersection(serviceContaienerRef, "0px")
     return (
-        <div 
-        ref={serviceContaienerRef}
-        className="services / flex flex-col gap-3 md:gap-10  / m-4 md:m-20 ">
-            <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"} `}  >Our Services</MyText>
+        <div
+            ref={serviceContaienerRef}
+            className="services container  / flex flex-col gap-3 md:gap-10  / mx-auto">
+            <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"} `}  >Our Services</MyText>
             <ServiceCards />
         </div>
     )
@@ -21,9 +21,9 @@ export default function Services() {
 
 function ServiceCards() {
     return (
-        <div className="seviceCardsContainer / flex flex-wrap justify-center gap-4 md:gap-6 /  ">
+        <div className="seviceCardsContainer / grid grid-cols-1 md:grid-cols-2 justify-center gap-4 md:gap-6 /  ">
             {data.services.map((service) => (
-                <ServiceCard image={service.image} title={service.title} description={service.description} icon={service.icon}/>
+                <ServiceCard image={service.image} title={service.title} description={service.description} icon={service.icon} />
             ))}
         </div>
     )

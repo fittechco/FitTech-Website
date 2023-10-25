@@ -12,9 +12,7 @@ export default function HomePage({
   contactRef: RefObject<HTMLDivElement>,
   handleContactClick: () => void
 }) {
- 
 
-  
   return (
     <div className="homePage / flex flex-col gap-20 / w-full h-full relative">
       <Hero onContactClick={handleContactClick} />

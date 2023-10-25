@@ -22,7 +22,7 @@ export function MyText({
             )
         case "h4":
             return (
-                <h1 className={className + " h3Text / font-montserrat text-xl md:text-2xl "}>{children}</h1>
+                <h1 className={className + " h3Text / font-montserrat text-xl md:text-2xl lg:text-3xl "}>{children}</h1>
             )
         case "span":
             return (

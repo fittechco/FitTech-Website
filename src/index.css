@@ -12,11 +12,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
   height: max-content;
 }
 
-body, #root {
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -50,4 +51,9 @@ button {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.card-shadow {
+  box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.16);
 }

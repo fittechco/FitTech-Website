@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com';
 import { RefObject, useEffect, useRef, useState } from "react";
 import useIntersection from "../lib/useIntersection";
 
-export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
+export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> }) {
   const SERVICE_ID = "service_lzdo1qu";
   const TEMPLATE_ID = "template_shr24zk";
   const USER_ID = "bKJefEiNRnoGbJflQ";
@@ -32,24 +32,24 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
       });
     e.target.reset()
   };
-  
+
   const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
     const handleHeight = () => {
-        textAreaRef.current!.style.height = textAreaRef.current?.scrollHeight + "px"
-    } 
-     textAreaRef.current! && textAreaRef.current!.addEventListener("keyup", handleHeight)
+      textAreaRef.current!.style.height = textAreaRef.current?.scrollHeight + "px"
+    }
+    textAreaRef.current! && textAreaRef.current!.addEventListener("keyup", handleHeight)
     return () => {
-        textAreaRef.current && textAreaRef.current!.removeEventListener("keyup", handleHeight)
-    } 
-} ,[])
+      textAreaRef.current && textAreaRef.current!.removeEventListener("keyup", handleHeight)
+    }
+  }, [])
 
   return (
     <div
       ref={myRef}
       id="contact-section"
-      className={`contact / flex flex-col gap-5 md:gap-12 / px-6 md:px-20 `}>
+      className={`contact container / flex flex-col gap-5 md:gap-12 / mx-auto `}>
       <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"}  `}>
         Contact Us
       </MyText>
@@ -67,7 +67,7 @@ export default function ContactUs({myRef}: {myRef: RefObject<HTMLDivElement>}) {
             </MyText>
           </div>
         </div>
-        <div className={`contactForm / flex-1 flex flex-col gap-20 / hero h-full w-full formShadow p-6 rounded-lg
+        <div className={`contactForm card-shadow / flex-1 flex flex-col gap-20 / hero h-full w-full  p-6 rounded-3xl
           mx-auto relative z-40 transition-all duration-1000 ease-in-out delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"}`}>
           <MyText
             type={"h3"}

@@ -15,7 +15,6 @@ import {
 import Blog from "./components/sections/blogs/blog";
 
 function App() {
-  const [count, setCount] = useState(0);
   const { nav, showNav, hideNav } = controlNav();
 
   const contactRef = useRef<HTMLDivElement>(null);
