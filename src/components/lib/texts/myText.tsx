@@ -3,7 +3,7 @@ export function MyText({
     className,
     children
 }: {
-    type: string
+    type: "h1" | "h2" | "h3" | "h4" | "span" | "p" | "p2"
     className: string
     children: JSX.Element | string
 }) {
@@ -14,7 +14,7 @@ export function MyText({
             )
         case "h2":
             return (
-                <h1 className={className + " h2Text / font-montserrat text-2xl md:text-4xl lg:text-5xl "}>{children}</h1>
+                <h2 className={className + " h2Text / font-montserrat text-2xl md:text-4xl lg:text-5xl "}>{children}</h2>
             )
         case "h3":
             return (
@@ -29,6 +29,10 @@ export function MyText({
                 <h1 className={className + " h3Text / font-montserrat text-lg md:text-2xl "}>{children}</h1>
             )
         case "p":
+            return (
+                <p className={className + " h3Text / font-montserrat text-lg md:text-lg lg:text-xl "}>{children}</p>
+            )
+        case "p2":
             return (
                 <p className={className + " h3Text / font-montserrat text-base md:text-lg lg:text-xl "}>{children}</p>
             )

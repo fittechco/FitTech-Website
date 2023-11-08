@@ -10,13 +10,14 @@ export default {
     extend: {
       container: {
         center: true,
-        padding: "1.25rem",
+        padding: "0.75rem",
         screens: {
           "2xl": "1400px",
         },
       },
       colors: {
         'mainColor': "#0C2840",
+        'mainColorLight': "#0E304D",
         'mainColor2': "#133E63",
         'mainColor3': "#091E2F",
         'accentColor': "#339CF8",

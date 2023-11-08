@@ -1,47 +1,37 @@
-import { LogoPoly } from "../lib/Polygons/logoPoly";
-import MainPoly from "../lib/Polygons/mainPoly";
-import { PlaceHolderPoly } from "../lib/Polygons/placeHolderPoly";
-import { Polygon } from "../lib/Polygons/polygons";
 import { MyText } from "../lib/texts/myText";
-import PolysAnimation from "./polysAnimation";
 import MyButton from "../lib/elements/myButton";
 import { useRef } from "react";
 import useIntersection from "../lib/useIntersection";
+import heroBannerImage from "../../../public/FT-hero-banner.png"
+import heroBannerImageMobile from "../../../public/FT-hero-banner-mobile.png"
 
 export default function Hero({ onContactClick }: { onContactClick: (navigate: any) => void }) {
   const heroRef = useRef<HTMLDivElement>(null)
   const heroVisible = useIntersection(heroRef, "0px")
 
   return (
-    // creating hero section wich will take full width and height of the current screen
-    <section ref={heroRef} className="hero ">
-      <div className="hero-wrapper container  flex items-center / w-full h-full relative  z-10 min-h-[112vh]">
-        <Polygon className={`-z-[1] absolute top-[3%] left-0 transition-all duration-1000 ease-in-out  ${heroVisible ? "scale-50" : "scale-0"}   `} />
-        <Polygon className={`-z-[1] absolute top-[40%] left-[0%]  lg:-left-[4%]  transition-all duration-1000 ease-in-out  md:block delay-100 ${heroVisible ? "scale-75 lg:scale-100" : "scale-0"} `} />
-        <Polygon className={`-z-[1] absolute top-[20%] left-[20%] lg:left-[25%] transition-all duration-1000  ease-in-out  delay-150 ${heroVisible ? "scale-50 lg:scale-75" : "scale-0"}`} />
-        <Polygon className={`-z-[1] absolute top-[8%]  left-[60%] lg:left-[45%] transition-all duration-1000 ease-in-out  delay-200 hidden md:static  ${heroVisible ? "scale-50 lg:scale-75 " : "scale-0"}`} />
-        <LogoPoly visible={heroVisible} className={`-z-[1] absolute md:hidden top-[15%]  left-[60%] lg:left-[45%] w-[92px] h-[92px] `} />
-        <Polygon className={`-z-[1] absolute top-[70%] left-[10%] lg:left-[10%] transition-all duration-1000 ease-in-out delay-[250] ${heroVisible ? "scale-[60%]" : "scale-0"} `} />
-        <Polygon className={`-z-[1] absolute top-[50%] left-[30%] lg:left-[15%] transition-all duration-1000 ease-in-out delay-300  ${heroVisible ? "scale-[50%]" : "scale-0"}`} />
-        <Polygon className={`-z-[1] absolute top-[70%] left-[55%] lg:left-[40%]  transition-all delay-[350] duration-500 ease-in-out ${heroVisible ? "scale-75 lg:scale-100" : "scale-0"}`} />
-        <Polygon className={`-z-[1] absolute top-[40%] left-[70%]  md:block lg:hidden transition-all duration-1000 ease-in-out delay-[400] ${heroVisible ? "scale-50 md:scale-75" : "scale-0"}`} />
-        <PolysAnimation visible={heroVisible} />
-        <div className="heroInfo / flex flex-col gap-6 md:gap-8 / z-10 md:mt-6 antialiased ">
-          <MyText type={"h2"} className={`text-thirdColor capitalize font-bold md:max-w-md lg:max-w-3xl transition-all duration-1000 ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-            {/* DIGITAL SOLUTIONS THAT DRIVE RESULTS: UNLEASH YOUR BUSINESS POTENTIAL WITH FITTECH */}
-            {/* Boost Your Beauty & Fitness Business with Shopify */}
-            {/* Your Journey to Beauty & Fitness Success Starts Here */}
+    <section ref={heroRef} className="hero relative overflow-hidden">
+      <div className="hero-banner w-full h-full bg-black absolute top-[0%] right-0">
+        <img src={heroBannerImage} alt="heroBannerImage" className="max-md:hidden" />
+        <img src={heroBannerImageMobile} alt="heroBannerImageMobile" className="md:hidden" />
+        <div
+          style={{
+            background: "linear-gradient(180deg, rgba(12, 40, 64, 0.30) 7.79%, rgba(12, 40, 64, 0.78) 47.16%, #0C2840 79.92%), #ffffff00 -109.318px 8.247px / 109.572% 79.245% no-repeat "
+          }}
+          className="gradient-bg absolute top-0 left-0 h-full w-full" />
+      </div>
+      <div className="hero-wrapper container flex items-end justify-center / w-full h-full relative z-10 min-h-[100vh]">
+        <div className="heroInfo / flex flex-col items-center justify-center gap-6 md:gap-8 / z-10 md:mt-6 antialiased pb-8">
+          <MyText type={"h2"} className={`text-thirdColor capitalize text-center font-bold md:max-w-md lg:max-w-3xl transition-all
+           duration-1000 ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
             Discover What's Beyond the Limits
           </MyText>
-          <MyText type={"p"} className={`text-thirdColor3 antialiased  md:max-w-lg transition-all ease-in-out duration-1000 delay-200 ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-            {/* Customized fitness solutions for gym owners, personal trainers,
-          supplement store owners, and fitness enthusiasts. Grow your fitness
-          business with our ecommerce websites, mobile apps, and digital
-          systems. */}
-            {/* Tailored Shopify  */}
+          <MyText type={"p"} className={`text-thirdColor3 antialiased text-center md:max-w-lg transition-all
+           ease-in-out duration-1000 delay-200 ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
             Shopify Ecommerce Websites that Convert for Maximum Business Potential
           </MyText>
-          <MyButton onClick={onContactClick} className={`transition-all delay-[400ms] duration-1000 ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
+          <MyButton onClick={onContactClick} className={`transition-all delay-[400ms] duration-1000
+           ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
         </div>
       </div>
 

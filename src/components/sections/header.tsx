@@ -55,7 +55,7 @@ export default function HeaderNav({ showNav, nav }: params) {
       <div className={`header-nav-wrapper 
       ${scrollPosition > 80
           ? " bgLinear backdrop-blur-sm "
-          : " bgLinearOff  backdrop-blur-0 "
+          : " bgLinear  backdrop-blur-sm "
         }  / flex justify-between items-center / border-mainColor2 border border-t-0  transition-all duration-300 w-full h-full px-4 rounded-b-3xl`}>
 
         <a href="/" className="agencyName">

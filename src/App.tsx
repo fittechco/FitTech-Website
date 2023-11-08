@@ -11,6 +11,7 @@ import {
   Route,
   useLocation,
   useNavigate,
+  useNavigation,
 } from "react-router-dom";
 import Blog from "./components/sections/blogs/blog";
 
@@ -19,7 +20,6 @@ function App() {
 
   const contactRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate()
-
 
   const handleContactClick = () => {
     // Update the URL to the homepage

@@ -21,7 +21,7 @@ export default function Services() {
 
 function ServiceCards() {
     return (
-        <div className="seviceCardsContainer / grid grid-cols-1 md:grid-cols-2 justify-center gap-4 md:gap-6 /  ">
+        <div className="seviceCardsContainer / grid grid-cols-1  justify-center gap-4 md:gap-6 /  ">
             {data.services.map((service) => (
                 <ServiceCard image={service.image} title={service.title} description={service.description} icon={service.icon} />
             ))}

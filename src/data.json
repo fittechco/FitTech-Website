@@ -22,27 +22,44 @@
     "services": [
         {
             "title": "Shopify Ecommerce Websites",
-            "description": "Our Shopify Ecommerce Website is tailored for beauty and fitness businesses. We specialize in creating stunning Shopify websites that not only captivate your audience but also ensure seamless online shopping experiences. With a focus on high conversion rates and user-friendly design",
+            "description": "We specialize in creating stunning Shopify websites that not only captivate your audience but also ensure seamless online shopping experiences. With a focus on high conversion rates and user engagement",
             "icon": "ecom",
-            "image": "/fitEom.png"
+            "image": "/ecommerceStore.png"
         },
         {
             "title": "Shopify Mobile Apps",
-            "description": "Elevate your fitness business with our Shopify Mobile App service. We design and develop custom mobile apps that empower users with workout tracking, class scheduling, and nutrition monitoring. Our apps are tailored to provide an enriched fitness experience, keeping your clients engaged and motivated.",
+            "description": "We will create or integrate Shopify apps to enhance your Shopify store's functionality. Apps that streamline operations, boost customer engagement, and maximize conversions.",
             "icon": "app",
-            "image": "/app.png"
+            "image": "/shopifyApps.png"
         },
         {
             "title": "Web Design",
-            "description": "Our Web Design service goes beyond aesthetics. We'll collaborate with you to create a website that not only reflects your brand but also enhances user engagement. Whether you're starting from scratch or refreshing an existing site, our designs are crafted to make your business stand out.",
+            "description": "Our Web Design service goes beyond aesthetics. We'll collaborate with you to create a website that enhances user engagement and convergion rate.",
             "icon": "design",
             "image": "/design.png"
         },
         {
-            "title": "Shopify App Integration",
-            "description": "Enhance your Shopify store's functionality with our Shopify App Integration service. We'll seamlessly integrate apps that streamline operations, boost customer engagement, and maximize conversions. Count on us to optimize your Shopify store with the right apps for your business needs.",
+            "title": "Shopify Mobile Apps",
+            "description": "Yes your reading this right!. We create mobile app for your Shopify store.",
             "icon": "system",
-            "image": "/system.png"
+            "image": "/shopifyMobileApp.png"
+        }
+    ],
+    "benefits": [
+        {
+            "title": "Super speed load",
+            "description": "Our expert developers will make your website load in less than 1.8 seconds while your competitor take 12 seconds",
+            "image": "/loadtime.png"
+        },
+        {
+            "title": "Increased Sales and Conversions",
+            "description": "drive higher conversion rates, resulting in increased sales and revenue for your business.",
+            "image": "/shopifySalesImage.jpg"
+        },
+        {
+            "title": "High Search Ranking",
+            "description": "Your website Will be optimized for search engines, increasing your chances of ranking well in search results and attracting organic traffic.",
+            "image": "/seo.png"
         }
     ]
 }
