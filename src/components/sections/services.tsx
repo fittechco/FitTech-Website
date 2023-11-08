@@ -13,13 +13,13 @@ export default function Services() {
             ref={serviceContaienerRef}
             className="services container  / flex flex-col gap-3 md:gap-10  / mx-auto">
             <MyText type={"h2"} className={`text-thirdColor3 font-bold transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"} `}  >Our Services</MyText>
-            <ServiceCards />
+            <ServiceCardsGrid />
         </div>
     )
 }
 
 
-function ServiceCards() {
+function ServiceCardsGrid() {
     return (
         <div className="seviceCardsContainer / grid grid-cols-1  justify-center gap-4 md:gap-6 /  ">
             {data.services.map((service) => (

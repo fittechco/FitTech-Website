@@ -61,5 +61,17 @@
             "description": "Your website Will be optimized for search engines, increasing your chances of ranking well in search results and attracting organic traffic.",
             "image": "/seo.png"
         }
+    ],
+    "customersReview": [
+        {
+            "websiteImageDesktop": "/homepage-hero-review.png",
+            "websiteImageMobile": "/suplab-mobile.png",
+            "review": "Working with Fittech was a breeze. They listened to our needs and created a Shopify website for our supplement store that's simply perfect. The team's expertise and commitment made the whole process enjoyable. We're impressed and grateful!",
+            "author": {
+                "name": "Suplab",
+                "image": "/AbdallahBerroProfile.png",
+                "position": "Owner of Suplab store"
+            }
+        }
     ]
 }

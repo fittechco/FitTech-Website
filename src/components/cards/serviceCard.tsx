@@ -24,10 +24,11 @@ export default function ServiceCard({
     return (
         <div
             style={{
-                boxShadow: "0px 4px 6px 3px rgba(0, 0, 0, 0.16)"
+                boxShadow: "0px 4px 6px 3px rgba(0, 0, 0, 0.16)",
+                height: "calc(100vh - 100px)"
             }}
             ref={cardref}
-            className={`serviceCard card-shadow / rounded-3xl border border-mainColor2 flex-1 w-auto h-[560px] md:h-[720px] overflow-hidden 
+            className={`serviceCard card-shadow / rounded-3xl border border-mainColor2 flex-1 w-auto overflow-hidden 
              relative transition-all duration-1000 ease-in-out delay-200
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/4"} `}>
             <img className="h-full w-full object-cover top-0 left-0 absolute" src={image} alt="" />

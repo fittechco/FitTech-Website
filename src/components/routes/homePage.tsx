@@ -5,6 +5,7 @@ import About from "../sections/about";
 import Services from "../sections/services";
 import { RefObject, useRef } from "react";
 import Benefits from "../sections/Benefits";
+import CustomersReview from "../sections/CustomersReview";
 
 export default function HomePage({
   contactRef,
@@ -19,6 +20,7 @@ export default function HomePage({
       <Hero onContactClick={handleContactClick} />
       <Benefits />
       <Services />
+      <CustomersReview />
       <About />
       <LatestBlogs />
       <ContactUs myRef={contactRef} />

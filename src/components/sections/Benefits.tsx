@@ -25,7 +25,7 @@ function BenefitsCard(props: {
             className={`benefits-card flex flex-col ${props.index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} overflow-hidden gap-5 h-full border border-mainColor2
              bg-mainColorLight py-5 px-5 md:py-10 md:px-10 rounded-3xl transition-all ease-in-out duration-1000 delay-200
               ${benefitCardVisible ? "translate-x-0 opacity-100" : `${translateX} opacity-0`}`}>
-            <div className="media w-[s640px] rounded-3xl flex-1">
+            <div className="media rounded-3xl flex-1">
                 <img src={benefit.image} className="w-full rounded-3xl" alt={benefit.title} />
             </div>
             <div
