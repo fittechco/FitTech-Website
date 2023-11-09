@@ -21,7 +21,6 @@ export default function HomePage({
       <Benefits />
       <Services />
       <CustomersReview />
-      <About />
       <LatestBlogs />
       <ContactUs myRef={contactRef} />
     </div>
