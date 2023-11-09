@@ -1,0 +1,78 @@
+{
+    "AboutUs": [
+        {
+            "title": "Who We Are",
+            "olddescription": "FitTech is a startup agency that specializes in providing technology and services to the fitness industry. Founded by Mohamad Hamoud and Ali Fouani, our company is driven by a passion for helping gym businesses and supplement stores succeed.At FitTech, we believe that technology can help bridge the gap between the fitness world and the digital world. We work tirelessly to provide our clients with innovative solutions that make it easier to manage their businesses, sell their products, and reach their goals.",
+            "description": "FitTech is an innovative agency specializing in crafting tailored Shopify eCommerce websites that empower businesses in the beauty and fitness industry. Our founders, Mohamad Hamoud and Ali Fouani, are driven by a passion for helping businesses transform their online presence and maximize their potential.",
+            "image": "/aboutUsImg.png"
+        },
+        {
+            "title": "Our Vision",
+            "olddescription": "At FitTech, our vision is to be the leading provider of technology and services for the fitness industry. We want to empower gym businesses and supplement stores with the tools they need to succeed, and we want to make it easier for fitness professionals to manage their businesses and sell their products.",
+            "description": "At FitTech, our vision is to be the premier provider of digital solutions for the beauty and fitness industry. We aim to equip businesses with cutting-edge eCommerce websites that not only showcase their vision but also drive remarkable results, boosting their online presence and conversions.",
+            "image": "/vision.png"
+        },
+        {
+            "title": "Our Mission",
+            "olddescription": "Our mission at FitTech is to provide our clients with the best possible service and the most innovative solutions. We are committed to helping gym businesses and supplement stores achieve their goals by providing them with customized technology and services that meet their specific needs. We are dedicated to staying ahead of the curve and delivering the latest and greatest in fitness technology to our clients.",
+            "description": "Our mission at FitTech is to deliver excellence through customized Shopify eCommerce websites that empower businesses to reach new heights. We are committed to ensuring beauty and fitness businesses achieve their goals by offering innovative and comprehensive digital solutions that cater to their unique needs. We are dedicated to staying at the forefront of eCommerce technology to provide unmatched value to our clients.",
+            "image": "/mission.png"
+        }
+    ],
+    "services": [
+        {
+            "title": "Shopify Ecommerce Websites",
+            "description": "We specialize in creating stunning Shopify websites that not only captivate your audience but also ensure seamless online shopping experiences. With a focus on high conversion rates and user engagement",
+            "icon": "ecom",
+            "image": "/ecommerceStore.png"
+        },
+        {
+            "title": "Shopify Mobile Apps",
+            "description": "We will create or integrate Shopify apps to enhance your Shopify store's functionality. Apps that streamline operations, boost customer engagement, and maximize conversions.",
+            "icon": "app",
+            "image": "/shopifyApps.png"
+        },
+        {
+            "title": "Web Design",
+            "description": "Our Web Design service goes beyond aesthetics. We'll collaborate with you to create a website that enhances user engagement and conversion rate.",
+            "icon": "design",
+            "image": "/design.png"
+        },
+        {
+            "title": "Shopify Mobile Apps",
+            "description": "Yes your reading this right!. We create mobile app for your Shopify store.",
+            "icon": "system",
+            "image": "/shopifyMobileApp.png"
+        }
+    ],
+    "benefits": [
+        {
+            "title": "Super speed load",
+            "description": "Our expert developers will make your website load in less than 1.8 seconds while your competitor take 12 seconds",
+            "image": "/loadtime.png"
+        },
+        {
+            "title": "Increased Sales and Conversions",
+            "description": "drive higher conversion rates, resulting in increased sales and revenue for your business.",
+            "image": "/shopifySalesImage.jpg"
+        },
+        {
+            "title": "High Search Ranking",
+            "description": "Your website Will be optimized for search engines, increasing your chances of ranking well in search results and attracting organic traffic.",
+            "image": "/seo.png"
+        }
+    ],
+    "customersReview": [
+        {
+            "websiteImageDesktop": "/homepage-hero-review.png",
+            "websiteImageMobile": "/suplab-mobile.png",
+            "review": "Working with Fittech was a breeze. They listened to our needs and created a Shopify website for our supplement store that's simply perfect. The team's expertise and commitment made the whole process enjoyable. We're impressed and grateful!",
+            "websiteUrl": "https://suplabstore.com",
+            "author": {
+                "name": "Suplab",
+                "image": "/AbdallahBerroProfile.png",
+                "position": "Owner of Suplab store"
+            }
+        }
+    ]
+}
