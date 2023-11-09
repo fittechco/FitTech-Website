@@ -24,11 +24,11 @@ export default function Hero({ onContactClick }: { onContactClick: (navigate: an
         <div className="heroInfo / flex flex-col items-center justify-center gap-6 md:gap-8 / z-10 md:mt-6 antialiased pb-8">
           <MyText type={"h2"} className={`text-thirdColor capitalize text-center font-bold md:max-w-md lg:max-w-3xl transition-all
            duration-1000 ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-            Discover What's Beyond the Limits
+            We Build Websites That Make Money
           </MyText>
           <MyText type={"p"} className={`text-thirdColor3 antialiased text-center md:max-w-lg transition-all
            ease-in-out duration-1000 delay-200 ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/4 opacity-0"}`}>
-            Shopify Ecommerce Websites that Convert for Maximum Business Potential
+            With our expert shopify developers building a high converting website is a piece of cake
           </MyText>
           <MyButton onClick={onContactClick} className={`transition-all delay-[400ms] duration-1000
            ease-in-out ${heroVisible ? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"}`} text={"Contact Us"} type={""} form={""} />
