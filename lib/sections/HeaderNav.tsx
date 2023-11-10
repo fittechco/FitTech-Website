@@ -67,7 +67,7 @@ export default function HeaderNav({ showNav, nav }: params) {
         <Link href="/" className="agencyName">
           <MyText
             type={"h3"}
-            className={`font-bold  transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            className={`font-bold  transition-all duration-1000 ease-in-out text-thirdColor  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
               }`}
           >
             FitTech
