@@ -46,8 +46,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
             </g>
             <path d="M274.998 50.8858L361.935 0.69251L448.872 50.8858V151.272L361.935 201.466L274.998 151.272V50.8858Z" stroke="#5CB0F9" strokeWidth="0.938872" />
             <defs>
-                <filter id="filter0_i_135_276" x="447.097" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_i_135_276" x="447.097" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -56,8 +56,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter1_i_135_276" x="535.534" y="150.431" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter1_i_135_276" x="535.534" y="150.431" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -66,8 +66,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter2_i_135_276" x="534.534" y="450.992" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter2_i_135_276" x="534.534" y="450.992" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -76,8 +76,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter3_i_135_276" x="448.158" y="0.150452" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter3_i_135_276" x="448.158" y="0.150452" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -86,8 +86,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter4_i_135_276" x="189.091" y="448.992" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter4_i_135_276" x="189.091" y="448.992" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -96,8 +96,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter5_i_135_276" x="273.467" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter5_i_135_276" x="273.467" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -106,8 +106,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter6_i_135_276" x="99.8374" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter6_i_135_276" x="99.8374" y="300.65" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -116,8 +116,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter7_i_135_276" x="361.843" y="150.37" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter7_i_135_276" x="361.843" y="150.37" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -126,8 +126,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter8_i_135_276" x="13.522" y="150.37" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter8_i_135_276" x="13.522" y="150.37" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -136,8 +136,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter9_i_135_276" x="101.711" y="2.15045" width="173.188" height="206.552" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter9_i_135_276" x="101.711" y="2.15045" width="173.188" height="206.552" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />
@@ -146,8 +146,8 @@ export function PlaceHolderPoly({ className }: { className: string }) {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_135_276" />
                 </filter>
-                <filter id="filter10_i_135_276" x="274.528" y="0.150452" width="174.813" height="208.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter10_i_135_276" x="274.528" y="0.150452" width="174.813" height="208.429" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="6.5721" />

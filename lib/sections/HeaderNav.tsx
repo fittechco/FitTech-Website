@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, CSSProperties } from "react";
 import MyIcons from "../myicons";
 import { MyText } from "../texts/myText";
-import useIntersection from "../useIntersection";
+import UseIntersection from "../useIntersection";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type params = {
   showNav: () => void;
@@ -12,8 +14,8 @@ export default function HeaderNav({ showNav, nav }: params) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("");
   const navRef = useRef<HTMLDivElement>(null);
-  const visible = useIntersection(navRef, "0px");
-
+  const visible = UseIntersection(navRef, "0px");
+  const pathname = usePathname()
   useEffect(() => {
     function handleScroll() {
       setScrollPosition(window.pageYOffset);
@@ -46,6 +48,10 @@ export default function HeaderNav({ showNav, nav }: params) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const transition: CSSProperties = {
+    transition: "transform 1s ease-in-out 0s, opacity 0.2s ease-in-out 0s",
+
+  }
   return (
     <div
       ref={navRef}
@@ -58,37 +64,46 @@ export default function HeaderNav({ showNav, nav }: params) {
           : " bgLinear  backdrop-blur-sm "
         }  / flex justify-between items-center / border-mainColor2 border border-t-0  transition-all duration-300 w-full h-full px-4 rounded-b-3xl`}>
 
-        <a href="/" className="agencyName">
+        <Link href="/" className="agencyName">
           <MyText
             type={"h3"}
-            className={`font-bold text-thirdColor transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            className={`font-bold  transition-all duration-1000 ease-in-out  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
               }`}
           >
             FitTech
           </MyText>
-        </a>
+        </Link>
         <div className="navigations / md:flex gap-8 / hidden  ">
-          <a
+          <Link
+            style={{
+              ...transition
+            }}
             href="/"
-            className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            className={`anchorText / ${pathname !== "/" ? "text-thirdColor3/80" : "text-thirdColor3"} hover:text-thirdColor3/100 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-200 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
               }`}
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
-            className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[400ms] ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            style={{
+              ...transition
+            }}
+            className={`anchorText / ${pathname !== "/about" ? "text-thirdColor3/80" : "text-thirdColor3"} hover:text-thirdColor3/100   font-montserrat text-xl transition-transform duration-1000 ease-in-out delay-[400ms] ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
               } `}
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
+            style={{
+              ...transition
+            }}
             href="/blogs"
-            className={`anchorText / text-thirdColor3 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[600ms]  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
+            className={`anchorText / ${pathname !== "/blogs" ? "text-thirdColor3/90" : "text-thirdColor3"} hover:text-thirdColor3/100 font-montserrat text-xl transition-all duration-1000 ease-in-out delay-[600ms]  ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1/4"
               } `}
           >
             Blogs
-          </a>
+          </Link>
         </div>
         <div
           onClick={() => showNav()}
@@ -97,6 +112,6 @@ export default function HeaderNav({ showNav, nav }: params) {
           <MyIcons className={""} icon={"navMenu"} />
         </div>
       </div>
-    </div>
+    </div >
   );
 }

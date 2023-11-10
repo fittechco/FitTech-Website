@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import MyButton from "../myButton";
 import { MyText } from "../texts/myText";
-import useIntersection from "../useIntersection";
+import UseIntersection from "../useIntersection";
+
 export default function About() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
 
-  const visible = useIntersection(aboutUsRef, "-80px");
+  const visible = UseIntersection(aboutUsRef, "-80px");
+
 
   return (
     <div
@@ -47,8 +49,7 @@ export default function About() {
             </MyText>
             <MyText type={"p"} className={"text-thirdColor3"}>
               FitTech is an innovative agency specializing in crafting tailored
-              Shopify eCommerce websites that empower businesses in the beauty
-              and fitness industry. Our founders, Mohamad Hamoud and Ali Fouani,
+              Shopify eCommerce websites that empower businesses . Our founders, Mohamad Hamoud and Ali Fouani,
               are driven by a passion for helping businesses transform their
               online presence and maximize their potential.
             </MyText>

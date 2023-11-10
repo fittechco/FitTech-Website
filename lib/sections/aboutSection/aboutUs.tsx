@@ -3,14 +3,14 @@ import About from "../about";
 import { useRef } from "react";
 import data from "../../../data.json"
 import { MyText } from "@/lib/texts/myText";
-import useIntersection from "@/lib/useIntersection";
+import UseIntersection from "@/lib/useIntersection";
 import Image from "next/image";
 import Hero from "./hero";
 
 export default function AboutUs() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
 
-  const visible = useIntersection(aboutUsRef, "00px");
+  const visible = UseIntersection(aboutUsRef, "00px");
   return (
     <div className="aboutUs / flex / w-full h-full / ">
       <div
@@ -42,7 +42,7 @@ function DisplayAbout({
   image: string
 }) {
   const displayAboutUsRef = useRef<HTMLDivElement>(null)
-  const visible = useIntersection(displayAboutUsRef, "00px");
+  const visible = UseIntersection(displayAboutUsRef, "00px");
   const infoRight = index % 2 == 0
 
   return (

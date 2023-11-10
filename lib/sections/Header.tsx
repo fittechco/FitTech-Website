@@ -6,18 +6,24 @@ import { useRouter } from 'next/navigation';
 
 export default function Header() {
     const { nav, showNav, hideNav } = ControlNav();
-
     const router = useRouter();
+
     const handleContactClick = () => {
-        // Update the URL to the homepage
-        router.push('/')
-        // Scroll to the contact section
-        const contactSection = document.getElementById('contact-section');
         if (location.pathname === '/') {
             const contactSection = document.getElementById('contact-section');
             if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
+                hideNav();
             }
+        } else {
+            router.push('/');
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact-section');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    hideNav();
+                }
+            }, 300);
         }
     }
     return (

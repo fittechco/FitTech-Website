@@ -6,8 +6,8 @@ export function Polygon({ className }: { className: string }) {
             </g>
             <path d="M0.768295 53.5387L92.5 0.57735L184.232 53.5387V159.461L92.5 212.423L0.768295 159.461V53.5387Z" stroke="#5CB0F9" />
             <defs>
-                <filter id="filter0_i_135_287" x="0.268066" y="0" width="184.464" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_i_135_287" x="0.268066" y="0" width="184.464" height="220" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="7" />

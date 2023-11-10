@@ -2,7 +2,7 @@ import emailjs from 'emailjs-com';
 import { RefObject, useEffect, useRef, useState } from "react";
 import MyButton from '../myButton';
 import { MyText } from '../texts/myText';
-import useIntersection from '../useIntersection';
+import UseIntersection from '../useIntersection';
 
 export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> }) {
   const SERVICE_ID = "service_lzdo1qu";
@@ -12,7 +12,7 @@ export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> 
   const [failed, setFailed] = useState(false)
   const contactRef = useRef<HTMLDivElement>(null)
 
-  const visible = useIntersection(contactRef, "-200px")
+  const visible = UseIntersection(contactRef, "-200px")
 
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
@@ -88,7 +88,6 @@ export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> 
               className="border-b text-lg md:text-2xl placeholder:text-thirdColor3 text-thirdColor
                          border-thirdColor bg-transparent focus:outline-none rounded"
             />
-
             <input
               type="email"
               name="email"
@@ -105,7 +104,6 @@ export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> 
               className="border-b text-lg md:text-2xl h-8 overflow-hidden placeholder:text-thirdColor3 text-thirdColor
                          border-thirdColor bg-transparent focus:outline-none rounded"
             />
-
           </form>
 
           <div className="flex flex-col gap-6">

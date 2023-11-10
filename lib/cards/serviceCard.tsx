@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import ecoStore from "../../assets/fitEom.png"
-import useIntersection from "../useIntersection"
+import UseIntersection from "../useIntersection"
 import Image from "next/image"
 import { MyText } from "../texts/myText"
 
@@ -19,7 +19,7 @@ export default function ServiceCard({
     image
 }: service) {
     const cardref = useRef<HTMLDivElement>(null)
-    const visible = useIntersection(cardref, "-5px")
+    const visible = UseIntersection(cardref, "-5px")
 
     return (
         <div

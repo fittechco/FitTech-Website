@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import blogImg from "@/public/blogimg.png"
-import useIntersection from "../useIntersection";
+import UseIntersection from "../useIntersection";
 import { MyText } from "../texts/myText";
 import Image from "next/image";
 
 export default function LatestBlogs() {
     const blogRef = useRef<HTMLDivElement>(null)
-    const visible = useIntersection(blogRef, "-80px")
+    const visible = UseIntersection(blogRef, "-80px")
     return (
         <div
             ref={blogRef}

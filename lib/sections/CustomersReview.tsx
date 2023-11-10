@@ -1,6 +1,6 @@
 import data from "../../data.json"
 import { useRef } from 'react'
-import useIntersection from "../useIntersection"
+import UseIntersection from "../useIntersection"
 import Image from "next/image"
 // What our customers say
 
@@ -19,7 +19,7 @@ function CustomersReviewCard(props: {
 }) {
     const { cutomerReview } = props
     const customerReviewRef = useRef<HTMLDivElement | null>(null)
-    const isVisible = useIntersection(customerReviewRef, "0px")
+    const isVisible = UseIntersection(customerReviewRef, "0px")
     return (
         <div
             ref={customerReviewRef}

@@ -9,7 +9,8 @@ import {
 } from "@react-spring/web";
 import MyButton from "../myButton";
 import MyIcons from "../myicons";
-import useIntersection from "../useIntersection";
+import UseIntersection from "../useIntersection";
+import { usePathname, useRouter } from "next/navigation";
 
 type params = {
   hideNav: () => void;
@@ -37,8 +38,7 @@ const navLinks = [
 
 export default function MobileNav({ hideNav, nav, handleContactClick }: params) {
   const navigationRef = useRef<HTMLDivElement>(null);
-
-  const isVisible = useIntersection(navigationRef, "0px");
+  const isVisible = UseIntersection(navigationRef, "0px");
 
   useEffect(() => {
     const handleClick = (e: any) => {
@@ -151,13 +151,15 @@ function AnchorRoute({
   text: string;
   onClick: (navigate: any) => void
 }) {
+  const router = useRouter();
+  const pathname = usePathname();
   switch (type) {
     case "anchor":
       return (
         <animated.a
           style={styles}
           href={path}
-          className={`anchorText / text-thirdColor3 font-montserrat text-2xl`}
+          className={`anchorText / ${pathname === path ? "text-thirdColor3/70" : "text-thirdColor3"} font-montserrat text-2xl`}
         >
           {text}
         </animated.a>
