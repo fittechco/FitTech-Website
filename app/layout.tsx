@@ -37,18 +37,16 @@ export default function RootLayout({
         `}} />
 
       </Head>
-      {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-E6VGS6DTC7" />
-      <script dangerouslySetInnerHTML={{
-        __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-E6VGS6DTC7" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
 
-  gtag('config', 'G-E6VGS6DTC7');
-  `
-      }}
-        async
-      /> */}
+          gtag('config', 'G-E6VGS6DTC7');
+        `}
+      </Script>
       <body className={`${montserrat.className} App h-full w-full relative`}>
         <Header />
         {children}
