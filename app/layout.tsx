@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { useEffect } from 'react'
 import { hotjar } from 'react-hotjar'
+import Hotjar from '@/lib/Hotjar'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -23,12 +24,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  useEffect(() => {
-    hotjar.initialize(3709792, 6)
-  }, [])
-
   return (
     <html lang="en">
+      <Hotjar />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-E6VGS6DTC7" />
       <Script id="google-analytics">
         {`
@@ -39,6 +37,7 @@ export default function RootLayout({
           gtag('config', 'G-E6VGS6DTC7');
         `}
       </Script>
+
       <body className={`${montserrat.className} App h-full w-full relative`}>
         <Header />
         {children}
