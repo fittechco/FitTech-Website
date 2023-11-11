@@ -19,7 +19,7 @@ function CustomersReviewCard(props: {
 }) {
     const { cutomerReview } = props
     const customerReviewRef = useRef<HTMLDivElement | null>(null)
-    const isVisible = UseIntersection(customerReviewRef, "0px")
+    const isVisible = UseIntersection(customerReviewRef, "80px")
     return (
         <div
             ref={customerReviewRef}

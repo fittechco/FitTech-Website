@@ -7,7 +7,7 @@ import ServiceCard from "../cards/serviceCard";
 
 export default function Services() {
     const serviceContaienerRef = useRef<HTMLDivElement>(null)
-    const visible = UseIntersection(serviceContaienerRef, "0px")
+    const visible = UseIntersection(serviceContaienerRef, "80px")
     return (
         <div
             ref={serviceContaienerRef}

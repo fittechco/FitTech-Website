@@ -15,7 +15,7 @@ function BenefitsCard(props: {
 }) {
     const { benefit, index } = props
     const benefitCardRef = useRef<HTMLDivElement | null>(null);
-    const benefitCardVisible = UseIntersection(benefitCardRef, "-80px")
+    const benefitCardVisible = UseIntersection(benefitCardRef, "80px")
     const translateX = index % 2 === 0 ? "-translate-x-1/4" : "translate-x-1/4"
     return (
         <div
@@ -46,7 +46,7 @@ function BenefitsCard(props: {
 export default function Benefits() {
     const benefitsRef = useRef<HTMLDivElement | null>(null);
     const benefits = data.benefits
-    const benefitsVisible = UseIntersection(benefitsRef, "0px")
+    const benefitsVisible = UseIntersection(benefitsRef, "80px")
     return (
         <div
             ref={benefitsRef}

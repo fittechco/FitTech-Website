@@ -10,7 +10,7 @@ import Hero from "./hero";
 export default function AboutUs() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
 
-  const visible = UseIntersection(aboutUsRef, "00px");
+  const visible = UseIntersection(aboutUsRef, "80px");
   return (
     <div className="aboutUs / flex / w-full h-full / ">
       <div
@@ -42,7 +42,7 @@ function DisplayAbout({
   image: string
 }) {
   const displayAboutUsRef = useRef<HTMLDivElement>(null)
-  const visible = UseIntersection(displayAboutUsRef, "00px");
+  const visible = UseIntersection(displayAboutUsRef, "80px");
   const infoRight = index % 2 == 0
 
   return (

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function LatestBlogs() {
     const blogRef = useRef<HTMLDivElement>(null)
-    const visible = UseIntersection(blogRef, "-80px")
+    const visible = UseIntersection(blogRef, "80px")
     return (
         <div
             ref={blogRef}

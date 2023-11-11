@@ -14,7 +14,7 @@ export default function HeaderNav({ showNav, nav }: params) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("");
   const navRef = useRef<HTMLDivElement>(null);
-  const visible = UseIntersection(navRef, "0px");
+  const visible = UseIntersection(navRef, "80px");
   const pathname = usePathname()
   useEffect(() => {
     function handleScroll() {

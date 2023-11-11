@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
     const footerRef = useRef<HTMLDivElement>(null)
-    const visible = UseIntersection(footerRef, "-80px")
+    const visible = UseIntersection(footerRef, "80px")
 
     return (
         <div

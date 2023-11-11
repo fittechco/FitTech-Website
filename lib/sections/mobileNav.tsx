@@ -38,7 +38,7 @@ const navLinks = [
 
 export default function MobileNav({ hideNav, nav, handleContactClick }: params) {
   const navigationRef = useRef<HTMLDivElement>(null);
-  const isVisible = UseIntersection(navigationRef, "0px");
+  const isVisible = UseIntersection(navigationRef, "80px");
 
   useEffect(() => {
     const handleClick = (e: any) => {

@@ -12,7 +12,7 @@ export default function ContactUs({ myRef }: { myRef: RefObject<HTMLDivElement> 
   const [failed, setFailed] = useState(false)
   const contactRef = useRef<HTMLDivElement>(null)
 
-  const visible = UseIntersection(contactRef, "-200px")
+  const visible = UseIntersection(contactRef, "80px")
 
   const handleOnSubmit = (e: any) => {
     e.preventDefault();

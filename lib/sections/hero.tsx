@@ -8,7 +8,7 @@ import UseIntersection from "../useIntersection";
 
 export default function Hero({ onContactClick }: { onContactClick: (navigate: any) => void }) {
   const heroRef = useRef<HTMLDivElement>(null)
-  const heroVisible = UseIntersection(heroRef, "0px")
+  const heroVisible = UseIntersection(heroRef, "80px")
 
   return (
     <section ref={heroRef} className="hero relative overflow-hidden">

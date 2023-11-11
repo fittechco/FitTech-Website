@@ -5,7 +5,7 @@ import UseIntersection from "@/lib/useIntersection";
 
 export default function Blogs() {
     const blogsRef = useRef<HTMLDivElement>(null);
-    const visible = UseIntersection(blogsRef, "-80px");
+    const visible = UseIntersection(blogsRef, "80px");
     return (
         <div
             ref={blogsRef}
