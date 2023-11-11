@@ -11,6 +11,7 @@ import MyButton from "../myButton";
 import MyIcons from "../myicons";
 import UseIntersection from "../useIntersection";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 type params = {
   hideNav: () => void;
@@ -89,34 +90,46 @@ export default function MobileNav({ hideNav, nav, handleContactClick }: params) 
   }, [nav, trailApi]);
 
   return (
-    <animated.div
-      style={{ ...springs }}
-      className={`mobileNav / flex justify-center items-center / fixed top-0 left-0 h-full w-full z-[999]
-          bg-mainColor3/70 backdrop-blur-sm  ${nav ? "pointer-events-auto" : "pointer-events-none"
-        } `}
-    >
+    <>
       <div
-        ref={navigationRef}
-        className="navigations / flex items-center justify-center flex-col gap-6 / p-24 relative "
+        style={{
+          opacity: nav ? 1 : 0,
+          zIndex: nav ? 999 : -1,
+          pointerEvents: nav ? "auto" : "none",
+          transition: "all 0.1s ease-in-out",
+        }}
+        className={`ackdrop-filter backdrop-blur-sm fixed top-0 left-0 h-full w-full z-[1000] bg-mainColor3/70  `}
+      />
+      <animated.div
+        style={{ ...springs }}
+        className={`mobileNav / flex justify-center items-center / fixed top-0 left-0 h-full w-full z-[1100]
+            ${nav ? "pointer-events-auto" : "pointer-events-none"
+          } `}
       >
-        {trail.map((props, index) => (
-          <AnchorRoute
-            onClick={handleContactClick}
-            styles={props}
-            key={index}
-            text={navLinks[index].text}
-            type={index < 3 ? "anchor" : "contact"}
-            path={navLinks[index].path!}
-          />
-        ))}
         <div
-          onClick={hideNav}
-          className="closeBtn absolute top-0 right-0 p-6 cursor-pointer"
+          ref={navigationRef}
+          className="navigations / flex items-center justify-center flex-col gap-6 / p-24 relative "
         >
-          <MyIcons className={"w-12 h-12"} icon={"close"} />
+          {trail.map((props, index) => (
+            <AnchorRoute
+              onClick={handleContactClick}
+              styles={props}
+              key={index}
+              hideNav={hideNav}
+              text={navLinks[index].text}
+              type={index < 3 ? "anchor" : "contact"}
+              path={navLinks[index].path!}
+            />
+          ))}
+          <div
+            onClick={hideNav}
+            className="closeBtn absolute top-0 right-0 p-6 cursor-pointer"
+          >
+            <MyIcons className={"w-12 h-12"} icon={"close"} />
+          </div>
         </div>
-      </div>
-    </animated.div>
+      </animated.div>
+    </>
   );
 }
 
@@ -143,26 +156,32 @@ function AnchorRoute({
   styles,
   type,
   path,
-  onClick
+  onClick,
+  hideNav,
 }: {
   type: string;
   path: string;
   styles: any;
   text: string;
+  hideNav: () => void;
   onClick: (navigate: any) => void
 }) {
-  const router = useRouter();
   const pathname = usePathname();
   switch (type) {
     case "anchor":
       return (
-        <animated.a
-          style={styles}
-          href={path}
-          className={`anchorText / ${pathname === path ? "text-thirdColor3/70" : "text-thirdColor3"} font-montserrat text-2xl`}
-        >
-          {text}
-        </animated.a>
+        <Link
+          onClick={() => {
+            hideNav();
+          }}
+          href={path}>
+          <animated.div
+            style={styles}
+            className={`anchorText / ${pathname === path ? "text-thirdColor3/70" : "text-thirdColor3"} font-montserrat text-2xl`}
+          >
+            {text}
+          </animated.div>
+        </Link>
       );
     case "contact":
       return (
