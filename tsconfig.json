@@ -34,7 +34,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/blogs"
+    "app/blogs",
+    "public/scripts/pixel.js"
   ],
   "exclude": [
     "node_modules"
