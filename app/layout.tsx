@@ -8,6 +8,8 @@ import Script from 'next/script'
 import { useEffect } from 'react'
 import { hotjar } from 'react-hotjar'
 import Hotjar from '@/lib/Hotjar'
+import Image from 'next/image'
+import FacebookPixel from '@/lib/FacebookPixel'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -37,11 +39,11 @@ export default function RootLayout({
           gtag('config', 'G-E6VGS6DTC7');
         `}
       </Script>
-
       <body className={`${montserrat.className} App h-full w-full relative`}>
         <Header />
         {children}
         <Footer />
+        <FacebookPixel />
       </body>
     </html>
   )
